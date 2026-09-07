@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { PhoneCall, Menu, X, Coffee, BedDouble, UtensilsCrossed } from "lucide-react";
+import { PhoneCall, Menu, X, Coffee, BedDouble, Waves } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 
 export const Navbar = () => {
@@ -19,20 +19,18 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile drawer on route change
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Rooms & Stay", href: "/rooms" },
+    { name: "15 Pool View Rooms", href: "/rooms" },
     { name: "The Cafe", href: "/cafe" },
-    { name: "Dining Room", href: "/dining" },
-    { name: "Private Events", href: "/events" },
-    { name: "Experiences", href: "/experiences" },
+    { name: "Lawn & Events", href: "/events" },
+    { name: "Corbett Experiences", href: "/experiences" },
     { name: "Gallery", href: "/gallery" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact & Location", href: "/contact" },
   ];
 
   return (
@@ -41,36 +39,36 @@ export const Navbar = () => {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
             ? "bg-[#FAF7F2]/95 backdrop-blur-md shadow-sm border-b border-[#F1EDE4] py-3"
-            : "bg-[#FAF7F2]/80 backdrop-blur-sm py-4"
+            : "bg-[#FAF7F2]/85 backdrop-blur-sm py-4"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Brand Logo & Tagline */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full bg-[#C35A38] text-white flex items-center justify-center font-serif text-xl font-bold shadow-sm transition-transform group-hover:scale-105">
-              H
+            <div className="w-10 h-10 rounded-full bg-[#C35A38] text-white flex items-center justify-center font-serif text-lg font-bold shadow-sm transition-transform group-hover:scale-105">
+              LR
             </div>
             <div>
-              <span className="font-serif text-xl sm:text-2xl font-semibold tracking-tight text-[#221F1E]">
-                The Haven
+              <span className="font-serif text-lg sm:text-xl font-bold tracking-tight text-[#221F1E] block">
+                The Local Roost
               </span>
-              <span className="block text-[10px] tracking-widest uppercase font-sans text-[#4A5B4E] font-medium">
-                Cafe • Dining • Stay
+              <span className="block text-[10px] tracking-widest uppercase font-sans text-[#4A5B4E] font-semibold">
+                Cafe & Stay • Jim Corbett
               </span>
             </div>
           </Link>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center space-x-7">
+          <nav className="hidden lg:flex items-center space-x-6">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`text-sm font-medium transition-colors hover:text-[#C35A38] ${
+                  className={`text-xs font-semibold tracking-wide transition-colors hover:text-[#C35A38] ${
                     isActive
-                      ? "text-[#C35A38] font-semibold underline underline-offset-8 decoration-2 decoration-[#C35A38]"
+                      ? "text-[#C35A38] font-bold underline underline-offset-8 decoration-2 decoration-[#C35A38]"
                       : "text-[#221F1E]/80"
                   }`}
                 >
@@ -83,7 +81,7 @@ export const Navbar = () => {
           {/* Right Action: Live WhatsApp Call */}
           <div className="hidden sm:flex items-center gap-3">
             <a
-              href={`https://wa.me/${siteConfig.whatsappNumber}?text=Hi%20The%20Haven%2C%20I%20would%20like%20to%20connect%20with%20your%20front%20desk.`}
+              href={`https://wa.me/${siteConfig.whatsappNumber}?text=Hi%20The%20Local%20Roost%2C%20I%20would%20like%20to%20connect%20with%20your%20reception.`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366]/15 hover:bg-[#25D366]/25 text-[#1b7a3d] border border-[#25D366]/30 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all shadow-xs"
@@ -93,7 +91,7 @@ export const Navbar = () => {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#25D366]"></span>
               </span>
               <PhoneCall className="w-3.5 h-3.5 text-[#25D366]" />
-              <span>WhatsApp Call</span>
+              <span>WhatsApp: +91 79003 45101</span>
             </a>
 
             <Link
@@ -134,9 +132,16 @@ export const Navbar = () => {
               <div className="flex items-center justify-between pb-4 border-b border-[#F1EDE4]">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-[#C35A38] text-white flex items-center justify-center font-serif font-bold text-sm">
-                    H
+                    LR
                   </div>
-                  <span className="font-serif font-semibold text-lg text-[#221F1E]">The Haven</span>
+                  <div>
+                    <span className="font-serif font-bold text-base text-[#221F1E] block">
+                      The Local Roost
+                    </span>
+                    <span className="text-[10px] text-[#4A5B4E] block">
+                      Cafe & Stay • Jim Corbett
+                    </span>
+                  </div>
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
@@ -149,20 +154,20 @@ export const Navbar = () => {
               {/* Pillars Banner */}
               <div className="grid grid-cols-3 gap-2 my-5 p-2 bg-[#F1EDE4] rounded-xl text-center">
                 <Link href="/rooms" className="p-2 hover:bg-white rounded-lg transition-colors flex flex-col items-center">
-                  <BedDouble className="w-4 h-4 text-[#C35A38] mb-1" />
-                  <span className="text-[10px] font-medium text-[#221F1E]">Rooms</span>
+                  <Waves className="w-4 h-4 text-[#C35A38] mb-1" />
+                  <span className="text-[10px] font-medium text-[#221F1E]">Pool Rooms</span>
                 </Link>
                 <Link href="/cafe" className="p-2 hover:bg-white rounded-lg transition-colors flex flex-col items-center">
                   <Coffee className="w-4 h-4 text-[#C35A38] mb-1" />
                   <span className="text-[10px] font-medium text-[#221F1E]">Cafe</span>
                 </Link>
-                <Link href="/dining" className="p-2 hover:bg-white rounded-lg transition-colors flex flex-col items-center">
-                  <UtensilsCrossed className="w-4 h-4 text-[#C35A38] mb-1" />
-                  <span className="text-[10px] font-medium text-[#221F1E]">Dining</span>
+                <Link href="/contact" className="p-2 hover:bg-white rounded-lg transition-colors flex flex-col items-center">
+                  <BedDouble className="w-4 h-4 text-[#C35A38] mb-1" />
+                  <span className="text-[10px] font-medium text-[#221F1E]">Location</span>
                 </Link>
               </div>
 
-              <div className="flex flex-col space-y-3">
+              <div className="flex flex-col space-y-2">
                 {navLinks.map((link) => {
                   const isActive = pathname === link.href;
                   return (
@@ -184,16 +189,16 @@ export const Navbar = () => {
 
             <div className="pt-6 border-t border-[#F1EDE4] space-y-3">
               <a
-                href={`https://wa.me/${siteConfig.whatsappNumber}?text=Hi%20The%20Haven%2C%20I%20want%20to%20speak%20with%20your%20team.`}
+                href={`https://wa.me/${siteConfig.whatsappNumber}?text=Hi%20The%20Local%20Roost%2C%20I%20want%20to%20inquire%20about%20a%20booking.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center gap-2 bg-[#25D366] text-white py-2.5 rounded-lg text-sm font-semibold shadow-sm"
               >
                 <PhoneCall className="w-4 h-4" />
-                <span>Chat / Call on WhatsApp</span>
+                <span>WhatsApp: +91 79003 45101</span>
               </a>
               <p className="text-center text-[11px] text-[#221F1E]/60">
-                Front Desk 24/7 • Cafe opens at 7:30 AM
+                Jim Corbett, Ramnagar • 24/7 Front Desk
               </p>
             </div>
           </div>

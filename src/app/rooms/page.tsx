@@ -9,24 +9,18 @@ import {
   CheckCircle2,
   Sparkles,
   MessageSquare,
-  ShieldCheck,
   Clock,
-  Dog,
-  Coffee,
+  Waves,
+  Car,
+  Wifi,
 } from "lucide-react";
 import { roomsData, Room } from "@/data/rooms";
 import { RoomInquiryModal } from "@/components/forms/RoomInquiryModal";
 import { siteConfig } from "@/data/siteConfig";
 
 export default function RoomsPage() {
-  const [activeCategory, setActiveCategory] = useState<string>("all");
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedRoomId, setSelectedRoomId] = useState<string | undefined>();
-
-  const filteredRooms =
-    activeCategory === "all"
-      ? roomsData
-      : roomsData.filter((r) => r.category === activeCategory);
 
   const openInquiry = (roomId: string) => {
     setSelectedRoomId(roomId);
@@ -39,60 +33,61 @@ export default function RoomsPage() {
       <section className="relative py-16 sm:py-24 bg-[#221F1E] text-white px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
         <div className="absolute inset-0 -z-10 opacity-35">
           <Image
-            src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1800&q=80"
-            alt="Boutique Rooms Ambiance"
+            src="/images/pool-courtyard.jpg"
+            alt="The Local Roost Swimming Pool and Rooms"
             fill
             className="object-cover object-center"
           />
         </div>
         <div className="max-w-3xl mx-auto space-y-4">
           <span className="text-xs font-bold uppercase tracking-widest text-[#D4A373]">
-            Curated Sanctuaries
+            15 Boutique Rooms • 100% Pool View
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold">
-            Boutique Rooms & Suites
+            Deluxe Pool View Rooms
           </h1>
           <p className="text-xs sm:text-base text-white/80 font-light max-w-xl mx-auto leading-relaxed">
-            Crafted with natural stone, warm teak, and organic linens. Every stay includes our signature artisan breakfast at The Cafe and single-origin pour-over coffee.
+            Every single room at The Local Roost overlooks our sparkling outdoor swimming pool and lush courtyard lawn. Complete with private sit-out balconies, king bedding, and free cafe breakfast.
           </p>
         </div>
       </section>
 
-      {/* 2. CATEGORY FILTER BAR */}
+      {/* 2. HIGHLIGHT BANNER: 15 POOL-VIEW ROOMS GUARANTEE */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-center flex-wrap gap-2">
-          {[
-            { label: "All Accommodations", value: "all" },
-            { label: "Suites", value: "suite" },
-            { label: "Garden Cottages", value: "cottage" },
-            { label: "Penthouse", value: "penthouse" },
-            { label: "Solo & Workation", value: "nook" },
-          ].map((cat) => (
-            <button
-              key={cat.value}
-              onClick={() => setActiveCategory(cat.value)}
-              className={`px-5 py-2.5 rounded-full text-xs font-semibold transition-all ${
-                activeCategory === cat.value
-                  ? "bg-[#C35A38] text-white shadow-sm"
-                  : "bg-white text-[#221F1E] border border-[#E8E2D8] hover:bg-[#F1EDE4]"
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
+        <div className="bg-[#F1EDE4] rounded-3xl p-6 sm:p-8 border border-[#E8E2D8] flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 rounded-2xl bg-[#C35A38] text-white flex items-center justify-center shrink-0">
+              <Waves className="w-8 h-8" />
+            </div>
+            <div>
+              <h3 className="font-serif text-xl font-bold text-[#221F1E]">
+                All 15 Rooms Offer Swimming Pool Views
+              </h3>
+              <p className="text-xs text-[#221F1E]/75 mt-0.5">
+                Whether choosing ground floor pool patios or first floor balconies, you enjoy panoramic poolside views and fresh Jim Corbett air.
+              </p>
+            </div>
+          </div>
+          <button
+            onClick={() => openInquiry("deluxe-pool-view-room")}
+            className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-xs px-6 py-3 rounded-full transition-all shadow-md flex items-center gap-2 shrink-0"
+          >
+            <MessageSquare className="w-4 h-4" />
+            <span>Check Dates (+91 79003 45101)</span>
+          </button>
         </div>
       </section>
 
       {/* 3. DETAILED ROOMS LIST */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        {filteredRooms.map((room, index) => {
+        {roomsData.map((room, index) => {
           const isEven = index % 2 === 0;
           return (
             <div
               key={room.id}
               className="bg-white rounded-3xl overflow-hidden border border-[#E8E2D8] shadow-sm hover:shadow-xl transition-all grid grid-cols-1 lg:grid-cols-12 gap-0"
             >
-              {/* Images Grid / Main Showcase */}
+              {/* Images Grid */}
               <div
                 className={`lg:col-span-6 relative min-h-[320px] sm:min-h-[420px] ${
                   isEven ? "lg:order-1" : "lg:order-2"
@@ -105,17 +100,17 @@ export default function RoomsPage() {
                   className="object-cover"
                 />
                 {room.badge && (
-                  <span className="absolute top-4 left-4 bg-[#221F1E]/80 backdrop-blur-xs text-[#D4A373] text-xs font-bold px-3 py-1 rounded-full shadow-xs">
+                  <span className="absolute top-4 left-4 bg-[#221F1E]/85 backdrop-blur-xs text-[#D4A373] text-xs font-bold px-3 py-1 rounded-full shadow-xs">
                     {room.badge}
                   </span>
                 )}
-                {/* Secondary Image Thumbnails on Desktop */}
+                {/* Secondary Image Thumbnail */}
                 {room.images.length > 1 && (
                   <div className="absolute bottom-4 right-4 flex gap-2">
                     {room.images.slice(1, 3).map((img, i) => (
                       <div
                         key={i}
-                        className="relative w-16 h-16 rounded-xl overflow-hidden border-2 border-white shadow-md"
+                        className="relative w-20 h-16 rounded-xl overflow-hidden border-2 border-white shadow-md"
                       >
                         <Image
                           src={img}
@@ -164,7 +159,7 @@ export default function RoomsPage() {
                     {room.description}
                   </p>
 
-                  {/* Complimentary Inclusions */}
+                  {/* Inclusions */}
                   <div className="pt-2">
                     <h4 className="text-xs font-bold uppercase tracking-wider text-[#C35A38] mb-2 flex items-center gap-1.5">
                       <Sparkles className="w-3.5 h-3.5" />
@@ -183,7 +178,7 @@ export default function RoomsPage() {
                   {/* Room Amenities */}
                   <div className="pt-2">
                     <h4 className="text-xs font-bold uppercase tracking-wider text-[#221F1E]/60 mb-2">
-                      Key Amenities
+                      Amenities
                     </h4>
                     <div className="flex flex-wrap gap-1.5">
                       {room.amenities.map((amenity, i) => (
@@ -216,7 +211,7 @@ export default function RoomsPage() {
                       className="flex-1 sm:flex-none bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-xs px-6 py-3 rounded-full transition-all shadow-md flex items-center justify-center gap-2"
                     >
                       <MessageSquare className="w-4 h-4" />
-                      <span>Check Dates on WhatsApp</span>
+                      <span>Inquire on WhatsApp</span>
                     </button>
                   </div>
                 </div>
@@ -226,15 +221,15 @@ export default function RoomsPage() {
         })}
       </section>
 
-      {/* 4. STAY PERKS & HOUSE POLICIES */}
+      {/* 4. POLICIES & GUIDELINES */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-[#FAF7F2] border border-[#E8E2D8] rounded-3xl p-8 sm:p-12">
           <div className="max-w-2xl mx-auto text-center mb-10 space-y-2">
             <span className="text-xs font-bold uppercase tracking-widest text-[#4A5B4E]">
-              Guest Care & House Rules
+              Guest Care & Guidelines
             </span>
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#221F1E]">
-              Booking Information & Guidelines
+              Stay Information
             </h2>
           </div>
 
@@ -244,41 +239,41 @@ export default function RoomsPage() {
                 <Clock className="w-5 h-5" />
               </div>
               <h4 className="font-serif text-lg font-bold text-[#221F1E]">
-                Timings & Front Desk
+                Check-in & Check-out
               </h4>
               <p className="text-xs text-[#221F1E]/75 leading-relaxed">
-                Check-in is from <strong>02:00 PM</strong> onwards. Check-out is until <strong>11:00 AM</strong>. Early check-in or late check-out is subject to availability and can be requested directly on WhatsApp.
+                Check-in is from <strong>01:00 PM</strong> onwards. Check-out is until <strong>11:00 AM</strong>. Early check-in or late check-out is subject to availability and can be requested via WhatsApp.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-2xl border border-[#E8E2D8] space-y-3">
               <div className="w-10 h-10 rounded-full bg-[#F7ECE8] text-[#C35A38] flex items-center justify-center">
-                <Coffee className="w-5 h-5" />
+                <Waves className="w-5 h-5" />
               </div>
               <h4 className="font-serif text-lg font-bold text-[#221F1E]">
-                Artisan Breakfast Included
+                Swimming Pool Rules
               </h4>
               <p className="text-xs text-[#221F1E]/75 leading-relaxed">
-                All confirmed room bookings include complimentary breakfast at our cafe between <strong>07:30 AM – 11:00 AM</strong>, including specialty coffee, fresh bakery baskets, and choice of farm brunch mains.
+                The outdoor swimming pool is open from <strong>07:00 AM – 08:00 PM</strong> daily. Proper swimwear is required. Complimentary pool towels are provided.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-2xl border border-[#E8E2D8] space-y-3">
               <div className="w-10 h-10 rounded-full bg-[#F7ECE8] text-[#C35A38] flex items-center justify-center">
-                <Dog className="w-5 h-5" />
+                <Car className="w-5 h-5" />
               </div>
               <h4 className="font-serif text-lg font-bold text-[#221F1E]">
-                Pet-Friendly Cottages
+                Parking & Wi-Fi
               </h4>
               <p className="text-xs text-[#221F1E]/75 leading-relaxed">
-                Our standalone <strong>Garden Cottage Villas</strong> welcome friendly pets. We provide pet food bowls and fresh bedding upon request. Please inform our desk during WhatsApp booking.
+                Spacious dedicated parking on premises for cars and SUVs. High-speed free Wi-Fi is available across all rooms, cafe, and pool courtyard.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 5. FLOATING BOTTOM INQUIRY MODAL */}
+      {/* MODAL */}
       <RoomInquiryModal
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}

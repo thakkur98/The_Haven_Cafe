@@ -1,5 +1,6 @@
 export interface SiteConfig {
   name: string;
+  shortName: string;
   tagline: string;
   description: string;
   phone: string;
@@ -7,7 +8,11 @@ export interface SiteConfig {
   whatsappCallUrl: string;
   email: string;
   address: string;
+  landmark: string;
   googleMapsUrl: string;
+  totalRooms: number;
+  allRoomsPoolView: boolean;
+  amenities: string[];
   hours: {
     cafe: string;
     dining: string;
@@ -21,23 +26,37 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "The Haven",
-  tagline: "Artisan Cafe, Gourmet Dining & Boutique Stay",
-  description: "A sanctuary where the aroma of single-origin coffee meets culinary craftsmanship and restful boutique rooms. Located amidst serene greens.",
-  phone: "+91 98765 43210",
-  whatsappNumber: "919876543210", // Plain digits with country code for wa.me
-  whatsappCallUrl: "https://wa.me/919876543210",
-  email: "stay@thehavenretreat.com",
-  address: "Hill View Estate, Forest Lane, Near Riverbank, Retreat Valley, 403516",
-  googleMapsUrl: "https://maps.google.com/?q=The+Haven+Retreat",
+  name: "The Local Roost Cafe & Stay",
+  shortName: "The Local Roost",
+  tagline: "Boutique Pool-View Stay & Artisan Cafe in Jim Corbett",
+  description: "A serene getaway in Jim Corbett featuring 15 all-pool-view rooms, a sparkling swimming pool, lush party lawn, expansive parking, and an artisanal stone-built cafe.",
+  phone: "+91 79003 45101",
+  whatsappNumber: "917900345101",
+  whatsappCallUrl: "https://wa.me/917900345101",
+  email: "stay@thelocalroost.com",
+  address: "Jim Corbett, Neeripur, Chhoi, Ramnagar, Uttarakhand 244715",
+  landmark: "Near Corbett Wild Flower Resort And Spa",
+  googleMapsUrl: "https://maps.app.goo.gl/K6GSV4NkGn1rDA99A?g_st=iw",
+  totalRooms: 15,
+  allRoomsPoolView: true,
+  amenities: [
+    "Swimming Pool",
+    "15 All-Pool-View Rooms",
+    "Artisan Stone Cafe",
+    "Spacious Party Lawn",
+    "Dedicated Free Parking",
+    "High-Speed Free Wi-Fi",
+    "24/7 Reception Desk",
+    "Power Backup",
+  ],
   hours: {
     cafe: "07:30 AM – 10:30 PM (Daily)",
     dining: "12:30 PM – 03:30 PM (Lunch) | 07:00 PM – 11:30 PM (Dinner)",
-    frontDesk: "24/7 Front Desk (Check-in: 02:00 PM | Check-out: 11:00 AM)",
+    frontDesk: "24/7 Front Desk (Check-in: 01:00 PM | Check-out: 11:00 AM)",
   },
   socials: {
-    instagram: "https://instagram.com/thehaven.retreat",
-    facebook: "https://facebook.com/thehavenretreat",
+    instagram: "https://instagram.com",
+    facebook: "https://facebook.com",
     tripadvisor: "https://tripadvisor.com",
   },
 };

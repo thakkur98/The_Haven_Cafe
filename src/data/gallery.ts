@@ -1,7 +1,7 @@
 export interface GalleryItem {
   id: string;
   title: string;
-  category: "all" | "rooms" | "cafe" | "dining" | "property";
+  category: "all" | "rooms" | "cafe" | "pool" | "property";
   imageUrl: string;
   aspect: "landscape" | "portrait" | "square";
 }
@@ -9,65 +9,44 @@ export interface GalleryItem {
 export const galleryItems: GalleryItem[] = [
   {
     id: "g-1",
-    title: "Canopy Balcony Suite Sunlit Morning",
-    category: "rooms",
-    imageUrl: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80",
+    title: "The Local Roost Cafe - Grand Stone Facade at Twilight",
+    category: "cafe",
+    imageUrl: "/images/resort-hero.jpg",
     aspect: "landscape",
   },
   {
     id: "g-2",
-    title: "Latte Art & Morning Sourdough Croissant",
-    category: "cafe",
-    imageUrl: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=80",
-    aspect: "square",
+    title: "Swimming Pool & 15 Pool-View Rooms Courtyard",
+    category: "pool",
+    imageUrl: "/images/pool-courtyard.jpg",
+    aspect: "landscape",
   },
   {
     id: "g-3",
-    title: "Candlelit Garden Dining Tables",
-    category: "dining",
-    imageUrl: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80",
+    title: "Deluxe Pool View Room Interior & Plush Bedding",
+    category: "rooms",
+    imageUrl: "/images/room-pool-view.jpg",
     aspect: "landscape",
   },
   {
     id: "g-4",
-    title: "Garden Villa Soaking Tub",
-    category: "rooms",
-    imageUrl: "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1000&q=80",
-    aspect: "portrait",
+    title: "Paved Parking & Architectural Stone Arches",
+    category: "property",
+    imageUrl: "/images/exterior-courtyard.jpg",
+    aspect: "landscape",
   },
   {
     id: "g-5",
-    title: "Artisan Burrata & Smoked Peaches",
-    category: "dining",
-    imageUrl: "https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=1000&q=80",
-    aspect: "square",
+    title: "Evening Illumination by the Pool Deck",
+    category: "pool",
+    imageUrl: "/images/pool-courtyard.jpg",
+    aspect: "landscape",
   },
   {
     id: "g-6",
-    title: "Courtyard Bonfire at Twilight",
+    title: "The Local Roost - Cafe Entrance & Outdoor Lawn",
     category: "property",
-    imageUrl: "https://images.unsplash.com/photo-1525811902-f2342640856e?auto=format&fit=crop&w=1000&q=80",
+    imageUrl: "/images/resort-hero.jpg",
     aspect: "landscape",
-  },
-  {
-    id: "g-7",
-    title: "Handcrafted Pour-Over Bar",
-    category: "cafe",
-    imageUrl: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1000&q=80",
-    aspect: "portrait",
-  },
-  {
-    id: "g-8",
-    title: "Horizon Sky Penthouse Sunset View",
-    category: "rooms",
-    imageUrl: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1000&q=80",
-    aspect: "landscape",
-  },
-  {
-    id: "g-9",
-    title: "12-Hour Slow Braised Lamb Shank",
-    category: "dining",
-    imageUrl: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80",
-    aspect: "square",
   },
 ];

@@ -6,34 +6,32 @@ import {
   MapPin,
   Phone,
   MessageSquare,
-  Mail,
   Clock,
   ExternalLink,
   Car,
   Check,
+  Waves,
 } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 
 export default function ContactPage() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [topic, setTopic] = useState("Room Stay Inquiry");
+  const [topic, setTopic] = useState("15 Pool View Rooms Inquiry");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const formatted = `💬 *DIRECT INQUIRY - THE HAVEN*
+    const formatted = `💬 *INQUIRY - THE LOCAL ROOST CAFE & STAY*
 ----------------------------------------
 👤 *Name:* ${name || "Guest"}
 📱 *Phone:* ${phone || "Not provided"}
-✉️ *Email:* ${email || "Not provided"}
-📌 *Inquiry Topic:* ${topic}
-📝 *Message:*
-${message || "Hi, I have an inquiry about The Haven."}
-----------------------------------------`;
+📌 *Topic:* ${topic}
+📝 *Message:* ${message || "Hi, I would like to inquire about dates and availability at The Local Roost."}
+----------------------------------------
+Jim Corbett, Uttarakhand`;
 
     const encoded = encodeURIComponent(formatted);
     window.open(
@@ -50,13 +48,13 @@ ${message || "Hi, I have an inquiry about The Haven."}
       <section className="relative py-16 sm:py-24 bg-[#221F1E] text-white px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
         <div className="max-w-3xl mx-auto space-y-4">
           <span className="text-xs font-bold uppercase tracking-widest text-[#D4A373]">
-            We&apos;re Here For You
+            Ramnagar, Jim Corbett
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold">
             Contact & Location
           </h1>
           <p className="text-xs sm:text-base text-white/80 font-light max-w-xl mx-auto leading-relaxed">
-            Reach out directly to our hosts. Whether you have questions regarding room availability, table reservations, directions, or special arrangements.
+            Reach out directly to our hosts. Whether you have questions regarding 15 pool-view room bookings, swimming pool timings, cafe orders, or driving directions.
           </p>
         </div>
       </section>
@@ -71,21 +69,21 @@ ${message || "Hi, I have an inquiry about The Haven."}
                 <MessageSquare className="w-6 h-6 text-[#25D366]" />
               </div>
               <h3 className="font-serif text-xl font-bold text-[#221F1E]">
-                WhatsApp Direct Desk
+                Direct WhatsApp Desk
               </h3>
               <p className="text-xs text-[#221F1E]/70 leading-relaxed">
-                Fastest way to get room confirmations, menu recommendations, and immediate answers from our duty manager.
+                Connect directly with our manager on +91 79003 45101 for immediate room confirmations, pool timings, and directions.
               </p>
             </div>
             <div className="pt-4 border-t border-[#F1EDE4] space-y-2">
               <a
-                href={`https://wa.me/${siteConfig.whatsappNumber}?text=Hi%20The%20Haven%2C%20I%20have%20a%20question.`}
+                href={`https://wa.me/${siteConfig.whatsappNumber}?text=Hi%20The%20Local%20Roost%2C%20I%20have%20an%20inquiry.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-semibold py-2.5 px-4 rounded-xl transition-all flex items-center justify-center gap-2 shadow-xs"
               >
                 <MessageSquare className="w-4 h-4" />
-                <span>Chat on WhatsApp</span>
+                <span>Chat on WhatsApp (+91 79003 45101)</span>
               </a>
               <a
                 href={`tel:${siteConfig.phone}`}
@@ -108,15 +106,15 @@ ${message || "Hi, I have an inquiry about The Haven."}
               </h3>
               <div className="space-y-2.5 text-xs text-[#221F1E]/80">
                 <div className="border-b border-[#F1EDE4] pb-2">
-                  <span className="block font-semibold text-[#221F1E]">The Artisan Cafe & Bakery</span>
+                  <span className="block font-semibold text-[#221F1E]">The Local Roost Cafe</span>
                   <span className="text-[#221F1E]/60">{siteConfig.hours.cafe}</span>
                 </div>
                 <div className="border-b border-[#F1EDE4] pb-2">
-                  <span className="block font-semibold text-[#221F1E]">Gourmet Dining Room</span>
-                  <span className="text-[#221F1E]/60">{siteConfig.hours.dining}</span>
+                  <span className="block font-semibold text-[#221F1E]">Swimming Pool</span>
+                  <span className="text-[#221F1E]/60">07:00 AM – 08:00 PM (Daily)</span>
                 </div>
                 <div>
-                  <span className="block font-semibold text-[#221F1E]">Boutique Stay & Reception</span>
+                  <span className="block font-semibold text-[#221F1E]">Stay & Front Desk</span>
                   <span className="text-[#221F1E]/60">{siteConfig.hours.frontDesk}</span>
                 </div>
               </div>
@@ -124,7 +122,7 @@ ${message || "Hi, I have an inquiry about The Haven."}
             <div className="pt-4 border-t border-[#F1EDE4]">
               <span className="text-[11px] text-[#4A5B4E] font-medium flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                Front desk is staffed 24 hours a day
+                Reception desk is staffed 24/7 on premises
               </span>
             </div>
           </div>
@@ -136,14 +134,17 @@ ${message || "Hi, I have an inquiry about The Haven."}
                 <MapPin className="w-6 h-6" />
               </div>
               <h3 className="font-serif text-xl font-bold text-[#221F1E]">
-                Property Location
+                Property Address
               </h3>
-              <p className="text-xs text-[#221F1E]/80 leading-relaxed">
+              <p className="text-xs text-[#221F1E]/85 leading-relaxed font-medium">
                 {siteConfig.address}
+              </p>
+              <p className="text-xs text-[#C35A38] font-bold">
+                Landmark: {siteConfig.landmark}
               </p>
               <div className="flex items-center gap-2 text-xs text-[#4A5B4E] pt-1">
                 <Car className="w-4 h-4 text-[#C35A38]" />
-                <span>Complimentary valet parking available on-site</span>
+                <span>Dedicated car & SUV parking available on-site</span>
               </div>
             </div>
             <div className="pt-4 border-t border-[#F1EDE4]">
@@ -171,10 +172,10 @@ ${message || "Hi, I have an inquiry about The Haven."}
                 Send an Inquiry
               </span>
               <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#221F1E]">
-                Leave Us a Message
+                Message The Local Roost
               </h2>
               <p className="text-xs text-[#221F1E]/70">
-                We will dispatch your message directly to our management team on WhatsApp.
+                Your message will be dispatched directly to our duty manager on WhatsApp.
               </p>
             </div>
 
@@ -184,16 +185,16 @@ ${message || "Hi, I have an inquiry about The Haven."}
                   <Check className="w-7 h-7" />
                 </div>
                 <h4 className="font-serif text-xl font-bold text-[#221F1E]">
-                  Message Dispatched!
+                  WhatsApp Chat Opened!
                 </h4>
                 <p className="text-xs text-[#221F1E]/75 max-w-sm mx-auto">
-                  Your WhatsApp has opened with the formatted inquiry. Our team will assist you immediately.
+                  Your inquiry is ready to send in WhatsApp. Our host will assist you right away.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
                   className="px-4 py-2 border border-[#C35A38] text-[#C35A38] rounded-xl text-xs font-semibold hover:bg-[#F7ECE8]"
                 >
-                  Send Another Message
+                  Send Another Inquiry
                 </button>
               </div>
             ) : (
@@ -206,7 +207,7 @@ ${message || "Hi, I have an inquiry about The Haven."}
                     <input
                       type="text"
                       required
-                      placeholder="e.g. Liam Smith"
+                      placeholder="e.g. Rahul Sharma"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       className="w-full bg-[#FAF7F2] border border-[#E8E2D8] rounded-xl px-3.5 py-2.5 text-xs text-[#221F1E] focus:outline-hidden focus:ring-2 focus:ring-[#C35A38]"
@@ -219,7 +220,7 @@ ${message || "Hi, I have an inquiry about The Haven."}
                     <input
                       type="tel"
                       required
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 79003 45101"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       className="w-full bg-[#FAF7F2] border border-[#E8E2D8] rounded-xl px-3.5 py-2.5 text-xs text-[#221F1E] focus:outline-hidden focus:ring-2 focus:ring-[#C35A38]"
@@ -227,35 +228,21 @@ ${message || "Hi, I have an inquiry about The Haven."}
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-medium text-[#221F1E]/80 mb-1">
-                      Email Address (Optional)
-                    </label>
-                    <input
-                      type="email"
-                      placeholder="name@example.com"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      className="w-full bg-[#FAF7F2] border border-[#E8E2D8] rounded-xl px-3.5 py-2.5 text-xs text-[#221F1E] focus:outline-hidden focus:ring-2 focus:ring-[#C35A38]"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-medium text-[#221F1E]/80 mb-1">
-                      Inquiry Topic
-                    </label>
-                    <select
-                      value={topic}
-                      onChange={(e) => setTopic(e.target.value)}
-                      className="w-full bg-[#FAF7F2] border border-[#E8E2D8] rounded-xl px-3.5 py-2.5 text-xs text-[#221F1E]"
-                    >
-                      <option value="Room Stay Inquiry">Room Stay Inquiry</option>
-                      <option value="Table Reservation">Table Reservation</option>
-                      <option value="Private Event & Gathering">Private Event & Gathering</option>
-                      <option value="Cafe Sourdough & Bulk Pickup">Cafe Sourdough & Bulk Pickup</option>
-                      <option value="General Feedback / Press">General Feedback / Press</option>
-                    </select>
-                  </div>
+                <div>
+                  <label className="block text-xs font-medium text-[#221F1E]/80 mb-1">
+                    Inquiry Topic
+                  </label>
+                  <select
+                    value={topic}
+                    onChange={(e) => setTopic(e.target.value)}
+                    className="w-full bg-[#FAF7F2] border border-[#E8E2D8] rounded-xl px-3.5 py-2.5 text-xs text-[#221F1E]"
+                  >
+                    <option value="15 Pool View Rooms Inquiry">15 Pool View Rooms Inquiry</option>
+                    <option value="Swimming Pool & Day Pass">Swimming Pool & Day Pass</option>
+                    <option value="The Local Roost Cafe & Dining">The Local Roost Cafe & Dining</option>
+                    <option value="Lawn Party & Group Gathering">Lawn Party & Group Gathering</option>
+                    <option value="Corbett Safari Package">Corbett Safari Package</option>
+                  </select>
                 </div>
 
                 <div>
@@ -265,7 +252,7 @@ ${message || "Hi, I have an inquiry about The Haven."}
                   <textarea
                     rows={4}
                     required
-                    placeholder="Tell us what you're looking for, preferred dates, or questions..."
+                    placeholder="Tell us your travel dates, number of guests, or questions..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     className="w-full bg-[#FAF7F2] border border-[#E8E2D8] rounded-xl px-3.5 py-2.5 text-xs text-[#221F1E] focus:outline-hidden focus:ring-2 focus:ring-[#C35A38]"
@@ -277,7 +264,7 @@ ${message || "Hi, I have an inquiry about The Haven."}
                   className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold py-3 px-6 rounded-xl flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all text-sm"
                 >
                   <MessageSquare className="w-4 h-4" />
-                  <span>Send via WhatsApp</span>
+                  <span>Send via WhatsApp (+91 79003 45101)</span>
                 </button>
               </form>
             )}
@@ -287,27 +274,27 @@ ${message || "Hi, I have an inquiry about The Haven."}
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-[#221F1E] text-white rounded-3xl p-6 sm:p-8 space-y-4">
               <span className="text-xs font-bold uppercase tracking-widest text-[#D4A373]">
-                Getting Here
+                Location & Connectivity
               </span>
               <h3 className="font-serif text-2xl font-bold">
-                A Scenic Journey
+                Reaching The Local Roost
               </h3>
               <p className="text-xs text-white/80 leading-relaxed">
-                Located 45 minutes from the central airport and 20 minutes from the railway junction. Follow the riverbank road shaded by ancient banyan groves.
+                Located in Chhoi, Ramnagar (Jim Corbett), just moments from Corbett Wild Flower Resort and Spa. Easily accessible via all-weather road with direct parking.
               </p>
 
               <div className="space-y-3 pt-2 text-xs">
                 <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                  <span className="text-white/60">Nearest Airport:</span>
-                  <span className="font-semibold text-white">Retreat Valley International (42 km)</span>
+                  <span className="text-white/60">Ramnagar Railway Station:</span>
+                  <span className="font-semibold text-white">~10 km (18 mins)</span>
                 </div>
                 <div className="flex items-center justify-between border-b border-white/10 pb-2">
-                  <span className="text-white/60">Railway Station:</span>
-                  <span className="font-semibold text-white">Central Junction (18 km)</span>
+                  <span className="text-white/60">Corbett Safari Entry Gates:</span>
+                  <span className="font-semibold text-white">Dhela / Jhirna (~12 km)</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-white/60">Parking:</span>
-                  <span className="font-semibold text-[#D4A373]">Free Dedicated Valet Parking</span>
+                  <span className="font-semibold text-[#D4A373]">Free Dedicated Car Parking</span>
                 </div>
               </div>
             </div>
@@ -315,26 +302,26 @@ ${message || "Hi, I have an inquiry about The Haven."}
             {/* Visual Map Container */}
             <div className="relative h-64 rounded-3xl overflow-hidden border border-[#E8E2D8] shadow-sm">
               <Image
-                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80"
-                alt="Map and landscape preview"
+                src="/images/exterior-courtyard.jpg"
+                alt="The Local Roost exterior and parking"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-[#221F1E]/50 flex flex-col items-center justify-center text-center p-4">
+              <div className="absolute inset-0 bg-[#221F1E]/55 flex flex-col items-center justify-center text-center p-4">
                 <MapPin className="w-8 h-8 text-[#C35A38] mb-2" />
                 <span className="font-serif text-white font-bold text-base">
-                  The Haven Estate
+                  The Local Roost Cafe & Stay
                 </span>
                 <span className="text-white/80 text-xs mt-1 max-w-xs">
-                  Riverbank & Forest View Lane, Retreat Valley
+                  Near Corbett Wild Flower Resort And Spa, Chhoi, Ramnagar
                 </span>
                 <a
                   href={siteConfig.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 bg-white text-[#221F1E] text-xs font-bold px-4 py-2 rounded-full hover:bg-[#FAF7F2] transition-colors inline-flex items-center gap-1.5"
+                  className="mt-3 bg-white text-[#221F1E] text-xs font-bold px-4 py-2 rounded-full hover:bg-[#FAF7F2] transition-colors inline-flex items-center gap-1.5 shadow-md"
                 >
-                  <span>Open Interactive Map</span>
+                  <span>Open in Google Maps</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </div>

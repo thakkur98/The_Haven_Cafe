@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { siteConfig } from "@/data/siteConfig";
-import { MapPin, Phone, Mail, Clock, MessageSquare, ExternalLink } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageSquare, ExternalLink, Waves } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -11,64 +11,49 @@ export const Footer = () => {
           {/* Brand Col */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#C35A38] text-white flex items-center justify-center font-serif text-xl font-bold">
-                H
+              <div className="w-10 h-10 rounded-full bg-[#C35A38] text-white flex items-center justify-center font-serif text-lg font-bold">
+                LR
               </div>
               <span className="font-serif text-2xl font-bold tracking-tight text-white">
-                The Haven
+                The Local Roost
               </span>
             </div>
             <p className="text-xs sm:text-sm text-[#FAF7F2]/70 leading-relaxed">
               {siteConfig.description}
             </p>
-            <div className="pt-2 flex items-center gap-3">
-              <a
-                href={siteConfig.socials.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-[#332E2C] hover:bg-[#C35A38] flex items-center justify-center text-xs transition-colors"
-                aria-label="Instagram"
-              >
-                IG
-              </a>
-              <a
-                href={siteConfig.socials.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-[#332E2C] hover:bg-[#C35A38] flex items-center justify-center text-xs transition-colors"
-                aria-label="Facebook"
-              >
-                FB
-              </a>
-              <a
-                href={siteConfig.socials.tripadvisor}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-[#332E2C] hover:bg-[#C35A38] flex items-center justify-center text-xs transition-colors"
-                aria-label="Tripadvisor"
-              >
-                TA
-              </a>
+            <div className="pt-1 flex flex-wrap gap-1.5">
+              <span className="text-[10px] bg-white/10 text-[#D4A373] px-2 py-0.5 rounded-sm">
+                🏊 Swimming Pool
+              </span>
+              <span className="text-[10px] bg-white/10 text-[#D4A373] px-2 py-0.5 rounded-sm">
+                🛏️ 15 Pool View Rooms
+              </span>
+              <span className="text-[10px] bg-white/10 text-[#D4A373] px-2 py-0.5 rounded-sm">
+                ☕ Artisan Cafe
+              </span>
+              <span className="text-[10px] bg-white/10 text-[#D4A373] px-2 py-0.5 rounded-sm">
+                🚗 Free Parking
+              </span>
             </div>
           </div>
 
           {/* Hours of Operation Col */}
           <div className="space-y-3">
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-[#D4A373] flex items-center gap-2">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#D4A373] flex items-center gap-2">
               <Clock className="w-4 h-4 text-[#D4A373]" />
-              Operating Hours
+              Timings & Services
             </h4>
             <div className="space-y-2.5 text-xs text-[#FAF7F2]/80">
               <div className="border-b border-[#332E2C] pb-2">
-                <span className="block font-medium text-white">The Artisan Cafe & Bakery</span>
+                <span className="block font-medium text-white">The Local Roost Cafe</span>
                 <span className="text-[#FAF7F2]/60">{siteConfig.hours.cafe}</span>
               </div>
               <div className="border-b border-[#332E2C] pb-2">
-                <span className="block font-medium text-white">Gourmet Dining Room</span>
-                <span className="text-[#FAF7F2]/60">{siteConfig.hours.dining}</span>
+                <span className="block font-medium text-white">Swimming Pool & Lawn</span>
+                <span className="text-[#FAF7F2]/60">07:00 AM – 08:00 PM (Daily)</span>
               </div>
               <div>
-                <span className="block font-medium text-white">Boutique Stay & Reception</span>
+                <span className="block font-medium text-white">Stay & Front Desk</span>
                 <span className="text-[#FAF7F2]/60">{siteConfig.hours.frontDesk}</span>
               </div>
             </div>
@@ -76,38 +61,38 @@ export const Footer = () => {
 
           {/* Quick Navigation Col */}
           <div className="space-y-3">
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-[#D4A373]">
-              Quick Exploration
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#D4A373]">
+              Quick Links
             </h4>
             <ul className="space-y-2 text-xs text-[#FAF7F2]/75">
               <li>
                 <Link href="/rooms" className="hover:text-[#D4A373] transition-colors">
-                  Boutique Rooms & Suites
+                  15 Deluxe Pool View Rooms
                 </Link>
               </li>
               <li>
                 <Link href="/cafe" className="hover:text-[#D4A373] transition-colors">
-                  Specialty Coffee & Bakery Menu
-                </Link>
-              </li>
-              <li>
-                <Link href="/dining" className="hover:text-[#D4A373] transition-colors">
-                  Dinner Table Reservations
+                  The Local Roost Cafe
                 </Link>
               </li>
               <li>
                 <Link href="/events" className="hover:text-[#D4A373] transition-colors">
-                  Private Gatherings & Celebrations
+                  Poolside Parties & Lawn Events
                 </Link>
               </li>
               <li>
                 <Link href="/experiences" className="hover:text-[#D4A373] transition-colors">
-                  Local Guide & Nature Activities
+                  Corbett Jungle Safari & Trails
                 </Link>
               </li>
               <li>
                 <Link href="/gallery" className="hover:text-[#D4A373] transition-colors">
-                  Atmosphere & Gallery
+                  Resort Photos & Gallery
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-[#D4A373] transition-colors">
+                  Location & Driving Directions
                 </Link>
               </li>
             </ul>
@@ -115,13 +100,19 @@ export const Footer = () => {
 
           {/* Contact & Location Col */}
           <div className="space-y-3">
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-[#D4A373]">
-              Get in Touch
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#D4A373]">
+              Jim Corbett Location
             </h4>
             <div className="space-y-2 text-xs text-[#FAF7F2]/80">
               <p className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-[#C35A38] shrink-0 mt-0.5" />
-                <span>{siteConfig.address}</span>
+                <span>
+                  {siteConfig.address}
+                  <br />
+                  <span className="text-[#D4A373] block mt-0.5 font-medium">
+                    Landmark: {siteConfig.landmark}
+                  </span>
+                </span>
               </p>
               <p className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-[#C35A38] shrink-0" />
@@ -135,15 +126,9 @@ export const Footer = () => {
                   href={`https://wa.me/${siteConfig.whatsappNumber}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#25D366] font-medium"
+                  className="hover:text-[#25D366] font-semibold"
                 >
-                  WhatsApp: +{siteConfig.whatsappNumber}
-                </a>
-              </p>
-              <p className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-[#C35A38] shrink-0" />
-                <a href={`mailto:${siteConfig.email}`} className="hover:text-white">
-                  {siteConfig.email}
+                  WhatsApp: +91 79003 45101
                 </a>
               </p>
             </div>
@@ -163,7 +148,7 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#FAF7F2]/50 gap-4">
-          <p>© {new Date().getFullYear()} The Haven. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} The Local Roost Cafe & Stay. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link href="/contact" className="hover:text-white transition-colors">
               House Rules & Policies
@@ -172,7 +157,7 @@ export const Footer = () => {
               Privacy Policy
             </Link>
             <Link href="/contact" className="hover:text-white transition-colors">
-              Inquiry Terms
+              Direct Booking Terms
             </Link>
           </div>
         </div>
