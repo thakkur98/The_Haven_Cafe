@@ -69,7 +69,7 @@ Hi The Haven Events Team, please share venue availability, packages, and custom 
       capacity: "25+ Overnight Guests & 100 Day Guests",
       ideal: "Micro-weddings, founders' retreats, multi-day creative workshops",
       desc: "Total exclusivity. All 8 boutique suites, complete private access to the cafe & bakery, full kitchen team dedicated to your customized menus.",
-      image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80",
+      image: "/images/pool-courtyard.jpg",
     },
   ];
 
@@ -298,7 +298,7 @@ Hi The Haven Events Team, please share venue availability, packages, and custom 
                   <input
                     type="tel"
                     required
-                    placeholder="+91 98765 43210"
+                    placeholder="Enter your WhatsApp number"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     className="w-full bg-[#FAF7F2] border border-[#E8E2D8] rounded-xl px-3.5 py-2.5 text-xs text-[#221F1E]"

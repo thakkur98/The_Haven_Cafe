@@ -1,7 +1,7 @@
 export interface GalleryItem {
   id: string;
   title: string;
-  category: "all" | "rooms" | "cafe" | "pool" | "property";
+  category: "all" | "rooms" | "cafe" | "pool" | "property" | "nearby";
   imageUrl: string;
   aspect: "landscape" | "portrait" | "square";
 }
@@ -36,17 +36,31 @@ export const galleryItems: GalleryItem[] = [
     aspect: "landscape",
   },
   {
-    id: "g-5",
-    title: "Evening Illumination by the Pool Deck",
-    category: "pool",
-    imageUrl: "/images/pool-courtyard.jpg",
+    id: "nearby-1",
+    title: "Hanuman Dham, Chhoi",
+    category: "nearby",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe0nwaUKBL0eriMyDFmRxC6YcLng5RpQVVk8itkfqErDcKANg5mQeZ1pQ&s=10",
     aspect: "landscape",
   },
   {
-    id: "g-6",
-    title: "The Local Roost - Cafe Entrance & Outdoor Lawn",
-    category: "property",
-    imageUrl: "/images/resort-hero.jpg",
+    id: "nearby-2",
+    title: "Corbett Waterfall",
+    category: "nearby",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToIb41c8ZF3xIh3-jF79a8kHrp3OUKhFCOkfhu3f__ZNNy81EQPN3t735L&s=10",
+    aspect: "landscape",
+  },
+  {
+    id: "nearby-3",
+    title: "Garjiya Devi Mandir",
+    category: "nearby",
+    imageUrl: "https://www.uttarakhand.org.in/wp-content/uploads/2015/04/DSC_1228-1024x683.jpg",
+    aspect: "landscape",
+  },
+  {
+    id: "nearby-4",
+    title: "Ramganga River View",
+    category: "nearby",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQScfByahPp2JYV9dj22zfTpmhPDZcLx4tFOEtuUA9WAg&s",
     aspect: "landscape",
   },
 ];

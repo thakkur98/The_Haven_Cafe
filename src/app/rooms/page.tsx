@@ -116,11 +116,6 @@ export default function RoomsPage() {
                   {/* Meta pills */}
                   <div className="flex flex-wrap items-center gap-3 text-xs text-[#4A5B4E] font-medium">
                     <span className="flex items-center gap-1">
-                      <Maximize2 className="w-3.5 h-3.5" />
-                      {room.size}
-                    </span>
-                    <span>•</span>
-                    <span className="flex items-center gap-1">
                       <Users className="w-3.5 h-3.5" />
                       {room.capacity}
                     </span>

@@ -4,10 +4,8 @@ export interface Room {
   category: "pool-view" | "balcony" | "patio";
   tagline: string;
   description: string;
-  size: string;
   capacity: string;
   bedType: string;
-  startingPrice: number;
   badge?: string;
   totalUnits?: number;
   inclusions: string[];
@@ -22,10 +20,8 @@ export const roomsData: Room[] = [
     category: "pool-view",
     tagline: "15 boutique rooms overlooking our sparkling swimming pool & lush lawn",
     description: "Every room at The Local Roost features direct, unobstructed views of our crystal-blue swimming pool and landscaped courtyard. Enjoy warm contemporary interiors, plush king bedding, ambient mood lighting, a private sit-out balcony or patio, and modern en-suite rain shower facilities.",
-    size: "360 sq.ft",
     capacity: "2 Adults + 1 Child",
     bedType: "Plush King Size Bed",
-    startingPrice: 3999,
     badge: "All 15 Rooms Pool View",
     totalUnits: 15,
     inclusions: [
@@ -58,10 +54,8 @@ export const roomsData: Room[] = [
     category: "balcony",
     tagline: "Elevated vantage point with sunrise breezes over the pool & lawn",
     description: "Located on the upper deck with elevated views spanning the entire pool courtyard, surrounding trees, and Ramnagar valley skyline. Features an intimate wooden railing balcony ideal for morning tea and evening conversations.",
-    size: "360 sq.ft",
     capacity: "2 Adults + 1 Child",
     bedType: "Plush King Size Bed",
-    startingPrice: 3999,
     badge: "Upper Deck View",
     totalUnits: 8,
     inclusions: [
@@ -91,10 +85,8 @@ export const roomsData: Room[] = [
     category: "patio",
     tagline: "Step straight out onto the lush lawn and poolside deck",
     description: "Step right from your room onto the manicured green lawn and poolside loungers. Perfect for families, children, and travelers who love effortless zero-staircase access to the swimming pool and outdoor cafe tables.",
-    size: "360 sq.ft",
     capacity: "2 Adults + 1 Child",
     bedType: "Plush King Size Bed",
-    startingPrice: 3999,
     badge: "Direct Lawn & Pool Access",
     totalUnits: 7,
     inclusions: [

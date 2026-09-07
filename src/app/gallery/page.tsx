@@ -15,6 +15,36 @@ export default function GalleryPage() {
       ? galleryItems
       : galleryItems.filter((g) => g.category === activeCategory);
 
+  const propertyItems = filtered.filter((item) => item.category !== "nearby");
+  const nearbyItems = filtered.filter((item) => item.category === "nearby");
+
+  const renderGallery = (items: GalleryItem[]) => (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {items.map((item) => (
+        <div
+          key={item.id}
+          onClick={() => setSelectedImage(item)}
+          className="relative h-72 sm:h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all cursor-pointer group border border-[#E8E2D8]"
+        >
+          <Image
+            src={item.imageUrl}
+            alt={item.title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-5 text-white">
+            <div className="flex items-center justify-between">
+              <span className="font-serif text-sm font-semibold">{item.title}</span>
+              <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-xs flex items-center justify-center">
+                <ZoomIn className="w-4 h-4" />
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+
   return (
     <div className="space-y-16 sm:space-y-20 pb-16">
       {/* 1. HERO HEADER */}
@@ -41,6 +71,7 @@ export default function GalleryPage() {
             { label: "The Cafe & Brews", value: "cafe" },
             { label: "Dining & Plates", value: "dining" },
             { label: "Courtyard & Nights", value: "property" },
+            { label: "Nearby Places", value: "nearby" },
           ].map((cat) => (
             <button
               key={cat.value}
@@ -57,35 +88,33 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* 3. MASONRY / GRID GALLERY */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((item) => (
-            <div
-              key={item.id}
-              onClick={() => setSelectedImage(item)}
-              className="relative h-72 sm:h-80 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all cursor-pointer group border border-[#E8E2D8]"
-            >
-              <Image
-                src={item.imageUrl}
-                alt={item.title}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-5 text-white">
-                <div className="flex items-center justify-between">
-                  <span className="font-serif text-sm font-semibold">{item.title}</span>
-                  <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-xs flex items-center justify-center">
-                    <ZoomIn className="w-4 h-4" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* 3. PROPERTY GALLERY */}
+      {propertyItems.length > 0 && (
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-widest text-[#C35A38]">
+              The Local Roost
+            </span>
+            <h2 className="font-serif text-3xl font-bold text-[#221F1E]">Property Gallery</h2>
+          </div>
+          {renderGallery(propertyItems)}
+        </section>
+      )}
 
-      {/* 4. INSTAGRAM CALLOUT */}
+      {/* 4. NEARBY PLACES GALLERY */}
+      {nearbyItems.length > 0 && (
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-widest text-[#C35A38]">
+              Around Jim Corbett
+            </span>
+            <h2 className="font-serif text-3xl font-bold text-[#221F1E]">Nearby Places Gallery</h2>
+          </div>
+          {renderGallery(nearbyItems)}
+        </section>
+      )}
+
+      {/* 5. INSTAGRAM CALLOUT */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="p-8 rounded-3xl bg-[#FAF7F2] border border-[#E8E2D8] max-w-2xl mx-auto space-y-4">
           <Camera className="w-8 h-8 text-[#C35A38] mx-auto" />

@@ -220,7 +220,7 @@ Jim Corbett, Uttarakhand`;
                     <input
                       type="tel"
                       required
-                      placeholder={siteConfig.phone}
+                      placeholder="Enter your WhatsApp number"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       className="w-full bg-[#FAF7F2] border border-[#E8E2D8] rounded-xl px-3.5 py-2.5 text-xs text-[#221F1E] focus:outline-hidden focus:ring-2 focus:ring-[#C35A38]"

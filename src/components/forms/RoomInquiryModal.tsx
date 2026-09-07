@@ -207,7 +207,7 @@ Please share rates and confirmation for these dates.`;
                   <input
                     type="tel"
                     required
-                    placeholder="+91 98765 43210"
+                    placeholder="Enter your WhatsApp number"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     className="w-full bg-white border border-[#E8E2D8] rounded-xl px-3 py-2 text-xs text-[#221F1E] focus:outline-hidden focus:ring-2 focus:ring-[#C35A38]"

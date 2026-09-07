@@ -268,9 +268,7 @@ export default function HomePage() {
                     )}
                   </div>
                   <div className="p-6 space-y-3">
-                    <div className="flex items-center justify-between text-xs text-[#4A5B4E] font-medium">
-                      <span>{room.size}</span>
-                      <span>•</span>
+                    <div className="flex items-center text-xs text-[#4A5B4E] font-medium">
                       <span>{room.capacity}</span>
                     </div>
                     <h3 className="font-serif text-xl font-bold text-[#221F1E]">
@@ -294,11 +292,12 @@ export default function HomePage() {
 
                 <div className="p-6 pt-0 border-t border-[#F1EDE4] mt-4 flex items-center justify-between">
                   <div>
-                    <span className="text-[10px] text-[#221F1E]/60 block uppercase">Starting from</span>
-                    <span className="font-serif text-lg font-bold text-[#C35A38]">
-                      ₹{room.startingPrice.toLocaleString()}
+                    <span className="text-[10px] text-[#221F1E]/60 block uppercase">
+                      Opening Rates
                     </span>
-                    <span className="text-[10px] text-[#221F1E]/60"> / night</span>
+                    <span className="font-serif text-lg font-bold text-[#C35A38]">
+                      Coming Soon
+                    </span>
                   </div>
                   <button
                     onClick={() => openRoomModal(room.id)}
