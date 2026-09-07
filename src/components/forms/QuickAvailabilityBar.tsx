@@ -36,19 +36,37 @@ Hi The Haven, please share available rooms & rates for these dates!`;
         {/* Check-In / Out */}
         <div className="flex items-center gap-3 px-3 py-1.5 border-b sm:border-b-0 sm:border-r border-[#F1EDE4]">
           <Calendar className="w-5 h-5 text-[#C35A38] shrink-0" />
-          <div className="w-full">
-            <span className="block text-[10px] font-bold uppercase tracking-wider text-[#221F1E]/60">
-              Dates
-            </span>
-            <div className="flex items-center gap-1 text-xs">
+          <div className="w-full grid grid-cols-2 gap-2">
+            <label className="min-w-0">
+              <span className="block text-[10px] font-bold uppercase tracking-wider text-[#221F1E]/60">
+                Check-in
+              </span>
               <input
                 type="date"
                 value={checkIn}
-                onChange={(e) => setCheckIn(e.target.value)}
+                onChange={(e) => {
+                  const nextCheckIn = e.target.value;
+                  setCheckIn(nextCheckIn);
+                  if (checkOut && nextCheckIn > checkOut) {
+                    setCheckOut("");
+                  }
+                }}
                 className="w-full bg-transparent text-[#221F1E] font-medium focus:outline-hidden text-xs"
-                placeholder="Check in"
               />
-            </div>
+            </label>
+            <label className="min-w-0">
+              <span className="block text-[10px] font-bold uppercase tracking-wider text-[#221F1E]/60">
+                Check-out
+              </span>
+              <input
+                type="date"
+                value={checkOut}
+                min={checkIn || undefined}
+                onChange={(e) => setCheckOut(e.target.value)}
+                disabled={!checkIn}
+                className="w-full bg-transparent text-[#221F1E] font-medium focus:outline-hidden text-xs disabled:cursor-not-allowed disabled:opacity-50"
+              />
+            </label>
           </div>
         </div>
 
