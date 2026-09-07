@@ -128,7 +128,7 @@ export const Footer = () => {
                   rel="noopener noreferrer"
                   className="hover:text-[#25D366] font-semibold"
                 >
-                  WhatsApp: +91 79003 45101
+                  WhatsApp: {siteConfig.phone}
                 </a>
               </p>
             </div>

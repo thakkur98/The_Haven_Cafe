@@ -68,7 +68,7 @@ export const Navbar = () => {
                   href={link.href}
                   className={`text-xs font-semibold tracking-wide transition-colors hover:text-[#C35A38] ${
                     isActive
-                      ? "text-[#C35A38] font-bold underline underline-offset-8 decoration-2 decoration-[#C35A38]"
+                      ? "text-[#C35A38] font-bold"
                       : "text-[#221F1E]/80"
                   }`}
                 >
@@ -91,7 +91,7 @@ export const Navbar = () => {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#25D366]"></span>
               </span>
               <PhoneCall className="w-3.5 h-3.5 text-[#25D366]" />
-              <span>WhatsApp: +91 79003 45101</span>
+              <span>WhatsApp: {siteConfig.phone}</span>
             </a>
 
             <Link
@@ -195,7 +195,7 @@ export const Navbar = () => {
                 className="w-full flex items-center justify-center gap-2 bg-[#25D366] text-white py-2.5 rounded-lg text-sm font-semibold shadow-sm"
               >
                 <PhoneCall className="w-4 h-4" />
-                <span>WhatsApp: +91 79003 45101</span>
+                <span>WhatsApp: {siteConfig.phone}</span>
               </a>
               <p className="text-center text-[11px] text-[#221F1E]/60">
                 Jim Corbett, Ramnagar • 24/7 Front Desk

@@ -72,7 +72,7 @@ Jim Corbett, Uttarakhand`;
                 Direct WhatsApp Desk
               </h3>
               <p className="text-xs text-[#221F1E]/70 leading-relaxed">
-                Connect directly with our manager on +91 79003 45101 for immediate room confirmations, pool timings, and directions.
+                Connect directly with our manager on {siteConfig.phone} for immediate room confirmations, pool timings, and directions.
               </p>
             </div>
             <div className="pt-4 border-t border-[#F1EDE4] space-y-2">
@@ -83,7 +83,7 @@ Jim Corbett, Uttarakhand`;
                 className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-semibold py-2.5 px-4 rounded-xl transition-all flex items-center justify-center gap-2 shadow-xs"
               >
                 <MessageSquare className="w-4 h-4" />
-                <span>Chat on WhatsApp (+91 79003 45101)</span>
+                <span>Chat on WhatsApp ({siteConfig.phone})</span>
               </a>
               <a
                 href={`tel:${siteConfig.phone}`}
@@ -220,7 +220,7 @@ Jim Corbett, Uttarakhand`;
                     <input
                       type="tel"
                       required
-                      placeholder="+91 79003 45101"
+                      placeholder={siteConfig.phone}
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       className="w-full bg-[#FAF7F2] border border-[#E8E2D8] rounded-xl px-3.5 py-2.5 text-xs text-[#221F1E] focus:outline-hidden focus:ring-2 focus:ring-[#C35A38]"
@@ -264,7 +264,7 @@ Jim Corbett, Uttarakhand`;
                   className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold py-3 px-6 rounded-xl flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all text-sm"
                 >
                   <MessageSquare className="w-4 h-4" />
-                  <span>Send via WhatsApp (+91 79003 45101)</span>
+                  <span>Send via WhatsApp ({siteConfig.phone})</span>
                 </button>
               </form>
             )}

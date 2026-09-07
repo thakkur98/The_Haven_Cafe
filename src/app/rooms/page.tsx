@@ -73,7 +73,7 @@ export default function RoomsPage() {
             className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold text-xs px-6 py-3 rounded-full transition-all shadow-md flex items-center gap-2 shrink-0"
           >
             <MessageSquare className="w-4 h-4" />
-            <span>Check Dates (+91 79003 45101)</span>
+            <span>Check Dates ({siteConfig.phone})</span>
           </button>
         </div>
       </section>
@@ -103,24 +103,6 @@ export default function RoomsPage() {
                   <span className="absolute top-4 left-4 bg-[#221F1E]/85 backdrop-blur-xs text-[#D4A373] text-xs font-bold px-3 py-1 rounded-full shadow-xs">
                     {room.badge}
                   </span>
-                )}
-                {/* Secondary Image Thumbnail */}
-                {room.images.length > 1 && (
-                  <div className="absolute bottom-4 right-4 flex gap-2">
-                    {room.images.slice(1, 3).map((img, i) => (
-                      <div
-                        key={i}
-                        className="relative w-20 h-16 rounded-xl overflow-hidden border-2 border-white shadow-md"
-                      >
-                        <Image
-                          src={img}
-                          alt={`${room.name} preview`}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                    ))}
-                  </div>
                 )}
               </div>
 
@@ -197,12 +179,14 @@ export default function RoomsPage() {
                 <div className="pt-6 border-t border-[#F1EDE4] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                   <div>
                     <span className="block text-[10px] uppercase tracking-wider text-[#221F1E]/60 font-medium">
-                      Starting Rate
+                      Opening Rates
                     </span>
                     <span className="font-serif text-2xl font-bold text-[#C35A38]">
-                      ₹{room.startingPrice.toLocaleString()}
+                      Coming Soon
                     </span>
-                    <span className="text-xs text-[#221F1E]/60"> / night + taxes</span>
+                    <span className="block text-xs text-[#221F1E]/60">
+                      Contact us for early-bird availability
+                    </span>
                   </div>
 
                   <div className="flex items-center gap-2 w-full sm:w-auto">

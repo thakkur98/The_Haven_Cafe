@@ -114,7 +114,7 @@ Please share rates and confirmation for these dates.`;
                 >
                   {roomsData.map((room) => (
                     <option key={room.id} value={room.id}>
-                      {room.name} (from ₹{room.startingPrice.toLocaleString()}/night)
+                      {room.name} (Opening Rates: Coming Soon)
                     </option>
                   ))}
                 </select>

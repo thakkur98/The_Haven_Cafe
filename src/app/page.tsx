@@ -67,7 +67,7 @@ export default function HomePage() {
 
           <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1]">
             The Local Roost <br />
-            <span className="italic font-normal text-[#D4A373]">Cafe & Boutique Stay</span>
+            <span className="italic font-normal text-[#D4A373]">Cafe & Stay</span>
           </h1>
 
           <p className="max-w-2xl mx-auto text-sm sm:text-base lg:text-lg text-white/90 font-light leading-relaxed">
@@ -137,7 +137,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="pt-2 flex items-center justify-between border-t border-[#E8E2D8]/60">
-                <span className="text-xs font-semibold text-[#4A5B4E]">From ₹3,999 / night</span>
+                <span className="text-xs font-semibold text-[#4A5B4E]">Opening Rates: Coming Soon</span>
                 <Link
                   href="/rooms"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-[#C35A38] group-hover:translate-x-1 transition-transform"
@@ -492,7 +492,7 @@ export default function HomePage() {
               Plan Your Stay at The Local Roost
             </h3>
             <p className="text-xs sm:text-sm text-white/80 max-w-lg">
-              Speak directly with our front desk on WhatsApp (+91 79003 45101) to check dates, reserve pool-view rooms, or organize Corbett safari packages.
+              Speak directly with our front desk on WhatsApp ({siteConfig.phone}) to check dates, reserve pool-view rooms, or organize Corbett safari packages.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">

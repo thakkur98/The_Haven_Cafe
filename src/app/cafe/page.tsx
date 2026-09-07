@@ -29,28 +29,29 @@ export default function CafePage() {
   return (
     <div className="space-y-16 sm:space-y-20 pb-16">
       {/* 1. HERO HEADER */}
-      <section className="relative py-16 sm:py-24 bg-[#221F1E] text-white px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
-        <div className="absolute inset-0 -z-10 opacity-40">
+      <section className="relative isolate min-h-[430px] flex items-center py-16 sm:py-24 bg-[#221F1E] text-white px-4 sm:px-6 lg:px-8 text-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
           <Image
             src="/images/resort-hero.jpg"
             alt="The Local Roost Cafe Exterior"
             fill
-            className="object-cover object-center"
+            className="object-cover object-center opacity-75"
           />
         </div>
-        <div className="max-w-3xl mx-auto space-y-4">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#D4A373]">
+        <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#221F1E]/90 via-[#221F1E]/55 to-[#221F1E]/35" />
+        <div className="relative z-20 max-w-3xl mx-auto space-y-4">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#F0C894]">
             Artisan Stone Cafe & Roastery
           </span>
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold">
+          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold drop-shadow-lg">
             The Local Roost Cafe
           </h1>
-          <p className="text-xs sm:text-base text-white/80 font-light max-w-xl mx-auto leading-relaxed">
+          <p className="text-xs sm:text-base text-white/90 font-light max-w-xl mx-auto leading-relaxed drop-shadow-md">
             Housed in our grand stone-clad facade with high arched glass windows. Fresh specialty coffees, artisanal teas, bakery bites, and hearty highway road-trip refreshments in Jim Corbett.
           </p>
-          <div className="pt-2 flex items-center justify-center gap-3 text-xs text-[#D4A373]">
+          <div className="pt-2 flex items-center justify-center gap-3 text-xs text-[#F0C894] drop-shadow-md">
             <Clock className="w-4 h-4" />
-            <span>Open Daily: 07:30 AM – 10:30 PM • Ample Car Parking on Premises</span>
+            <span>Open Daily: 10:00 AM – 11:00 PM • Ample Car Parking on Premises</span>
           </div>
         </div>
       </section>
@@ -181,7 +182,7 @@ export default function CafePage() {
             className="bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold px-6 py-3.5 rounded-full transition-all shadow-md flex items-center gap-2 shrink-0"
           >
             <MessageSquare className="w-4 h-4" />
-            <span>Order on WhatsApp (+91 79003 45101)</span>
+            <span>Order on WhatsApp ({siteConfig.phone})</span>
           </a>
         </div>
       </section>
