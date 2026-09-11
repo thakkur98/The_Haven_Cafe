@@ -20,11 +20,11 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} | Artisan Cafe, Gourmet Dining & Boutique Stay`,
+  title: `${siteConfig.name} | Cafe, Gourmet Dining & Boutique Stay`,
   description: siteConfig.description,
   keywords: [
     "Boutique hotel",
-    "Artisan cafe",
+    "Cafe",
     "Specialty coffee",
     "Gourmet dining",
     "Weekend getaway",

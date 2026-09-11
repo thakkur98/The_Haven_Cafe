@@ -233,7 +233,7 @@ Please share rates and confirmation for these dates.`;
               <div className="p-3 bg-[#F1EDE4] rounded-xl flex items-center gap-2.5 text-xs text-[#4A5B4E]">
                 <Sparkles className="w-4 h-4 text-[#C35A38] shrink-0" />
                 <span>
-                  <strong>Included Free:</strong> Artisan cafe breakfast & single-origin coffee daily.
+                  <strong>Included Free:</strong> Cafe breakfast & fresh coffee daily.
                 </span>
               </div>
 

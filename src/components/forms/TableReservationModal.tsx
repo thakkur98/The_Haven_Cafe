@@ -32,7 +32,7 @@ export const TableReservationModal = ({
 
     const formattedMessage = `🍽️ *TABLE RESERVATION INQUIRY - THE HAVEN*
 ----------------------------------------
-📍 *Venue:* ${venue === "cafe" ? "The Artisan Cafe & Bakery" : "Gourmet Dining Room"}
+📍 *Venue:* ${venue === "cafe" ? "The Local Roost Cafe" : "Gourmet Dining Room"}
 👤 *Name:* ${name || "Guest"}
 📱 *Phone:* ${phone || "Not provided"}
 📅 *Date:* ${date || "Today"}
@@ -125,7 +125,7 @@ Please confirm table availability for our party.`;
                         : "bg-white text-[#221F1E] border-[#E8E2D8] hover:bg-[#F1EDE4]"
                     }`}
                   >
-                    The Artisan Cafe & Bakery
+                    The Local Roost Cafe
                   </button>
                 </div>
               </div>

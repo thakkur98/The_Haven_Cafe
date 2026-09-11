@@ -185,7 +185,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Pillar 3: The Artisan Cafe */}
+          {/* Pillar 3: The Cafe */}
           <div className="bg-[#F1EDE4] rounded-3xl overflow-hidden border border-[#E8E2D8] hover:shadow-xl transition-all group flex flex-col justify-between">
             <div className="relative h-64 w-full overflow-hidden">
               <Image
@@ -196,27 +196,27 @@ export default function HomePage() {
               />
               <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-xs text-[#221F1E] px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1.5">
                 <Coffee className="w-3.5 h-3.5 text-[#C35A38]" />
-                <span>The Cafe</span>
+                <span>Cafe & Evening Drinks</span>
               </div>
             </div>
             <div className="p-6 flex-grow flex flex-col justify-between space-y-4">
               <div>
                 <h3 className="font-serif text-2xl font-bold text-[#221F1E]">
-                  The Local Roost Cafe
+                  Cafe Nights at The Local Roost
                 </h3>
                 <p className="text-xs sm:text-sm text-[#221F1E]/75 mt-2 leading-relaxed">
-                  Our grand stone facade cafe serves aromatic coffees, fresh refreshments, and regional bites. A warm hangout with ample parking for road trips and stay guests.
+                  Sip signature drinks, enjoy cocktails, and settle into easy evening conversations by the pool.
                 </p>
               </div>
               <div className="pt-2 flex items-center justify-between border-t border-[#E8E2D8]/60">
-                <span className="text-xs font-semibold text-[#4A5B4E]">Open Daily 7:30 AM</span>
-                <button
-                  onClick={() => openComingSoon("The Local Roost Menu")}
+                <span className="text-xs font-semibold text-[#4A5B4E]">Open Daily • 10 AM – 11 PM</span>
+                <Link
+                  href="/cafe"
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-[#C35A38] group-hover:translate-x-1 transition-transform"
                 >
-                  <span>Menu (Coming Soon)</span>
+                  <span>Explore Cafe</span>
                   <ArrowRight className="w-3.5 h-3.5" />
-                </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -8,24 +8,13 @@ import {
   Wifi,
   Laptop,
   MessageSquare,
+  Music2,
   Clock,
   Car,
 } from "lucide-react";
-import { cafeMenuCategories } from "@/data/menus";
-import { ComingSoonModal } from "@/components/common/ComingSoonModal";
 import { siteConfig } from "@/data/siteConfig";
 
 export default function CafePage() {
-  const [comingSoonOpen, setComingSoonOpen] = useState(false);
-  const [modalTitle, setModalTitle] = useState("Seasonal Cafe Menu");
-
-  const openComingSoon = (title: string) => {
-    setModalTitle(title);
-    setComingSoonOpen(true);
-  };
-
-  const allItems = cafeMenuCategories.flatMap((c) => c.items);
-
   return (
     <div className="space-y-16 sm:space-y-20 pb-16">
       {/* 1. HERO HEADER */}
@@ -41,7 +30,7 @@ export default function CafePage() {
         <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#221F1E]/90 via-[#221F1E]/55 to-[#221F1E]/35" />
         <div className="relative z-20 max-w-3xl mx-auto space-y-4">
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#F0C894]">
-            Artisan Stone Cafe & Roastery
+            The Local Roost Cafe
           </span>
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold drop-shadow-lg">
             The Local Roost Cafe
@@ -99,63 +88,30 @@ export default function CafePage() {
         </div>
       </section>
 
-      {/* 3. MENU PREVIEW & COMING SOON BANNER */}
+      {/* 3. CAFE EXPERIENCE */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="text-center max-w-xl mx-auto space-y-2">
           <span className="text-xs font-bold uppercase tracking-widest text-[#4A5B4E]">
-            Artisan Selections
+            A Feel-Good Cafe Experience
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#221F1E]">
-            Cafe Selections & Brews
+            Come for the mood, stay for the moments
           </h2>
           <p className="text-xs sm:text-sm text-[#221F1E]/70">
-            Click any item below to view seasonal availability or order directly via WhatsApp
+            Our opening menu is being shaped around slow mornings, refreshing evenings, and easy conversations by the pool.
           </p>
         </div>
 
-        {/* Menu Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {allItems.map((item) => (
-            <div
-              key={item.id}
-              onClick={() => openComingSoon(item.name)}
-              className="bg-white rounded-2xl overflow-hidden border border-[#E8E2D8] shadow-2xs hover:shadow-md transition-all flex flex-col justify-between cursor-pointer group"
-            >
-              <div>
-                {item.image && (
-                  <div className="relative h-48 w-full overflow-hidden">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                )}
-                <div className="p-5 space-y-2.5">
-                  <div className="flex items-start justify-between gap-2">
-                    <h3 className="font-serif text-lg font-bold text-[#221F1E] group-hover:text-[#C35A38] transition-colors">
-                      {item.name}
-                    </h3>
-                    <span className="font-serif text-base font-bold text-[#C35A38] shrink-0">
-                      ₹{item.price}
-                    </span>
-                  </div>
-                  <p className="text-xs text-[#221F1E]/75 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-
-              <div className="p-5 pt-0 border-t border-[#F1EDE4] mt-3">
-                <button
-                  type="button"
-                  className="w-full bg-[#FAF7F2] group-hover:bg-[#25D366] text-[#221F1E] group-hover:text-white border border-[#E8E2D8] group-hover:border-[#25D366] text-xs font-semibold py-2 px-3 rounded-xl transition-all flex items-center justify-center gap-1.5"
-                >
-                  <MessageSquare className="w-3.5 h-3.5 text-[#25D366] group-hover:text-white" />
-                  <span>Click for Availability / WhatsApp Order</span>
-                </button>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {[
+            { icon: Coffee, title: "Signature Drinks", text: "Specialty coffee, chilled pours, refreshing coolers, and comforting cups made for long, easy afternoons." },
+            { icon: Sparkles, title: "Cocktails & Evening Sips", text: "Thoughtful cocktails, zero-proof options, and relaxed sundowner moments as the property lights up." },
+            { icon: Music2, title: "Live Music & Good Energy", text: "Unwind with acoustic evenings, gentle playlists, friendly conversations, and memorable stays by the pool." },
+          ].map(({ icon: Icon, title, text }) => (
+            <div key={title} className="bg-white border border-[#E8E2D8] rounded-2xl p-6 space-y-3 shadow-2xs">
+              <Icon className="w-7 h-7 text-[#C35A38]" />
+              <h3 className="font-serif text-xl font-bold text-[#221F1E]">{title}</h3>
+              <p className="text-xs text-[#221F1E]/70 leading-relaxed">{text}</p>
             </div>
           ))}
         </div>
@@ -187,13 +143,6 @@ export default function CafePage() {
         </div>
       </section>
 
-      {/* COMING SOON MODAL */}
-      <ComingSoonModal
-        isOpen={comingSoonOpen}
-        onClose={() => setComingSoonOpen(false)}
-        title={modalTitle}
-        category="Cafe"
-      />
     </div>
   );
 }

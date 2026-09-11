@@ -29,7 +29,7 @@ export const Footer = () => {
                 🛏️ 15 Pool View Rooms
               </span>
               <span className="text-[10px] bg-white/10 text-[#D4A373] px-2 py-0.5 rounded-sm">
-                ☕ Artisan Cafe
+                ☕ The Local Roost Cafe
               </span>
               <span className="text-[10px] bg-white/10 text-[#D4A373] px-2 py-0.5 rounded-sm">
                 🚗 Free Parking

@@ -28,7 +28,7 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   name: "The Local Roost Cafe & Stay",
   shortName: "The Local Roost",
-  tagline: "Boutique Pool-View Stay & Artisan Cafe in Jim Corbett",
+  tagline: "Boutique Pool-View Stay & Cafe in Jim Corbett",
   description: "A serene getaway in Jim Corbett featuring 15 all-pool-view rooms, a sparkling swimming pool, lush party lawn, expansive parking, and an artisanal stone-built cafe.",
   phone: "+91 79003 45103",
   whatsappNumber: "917900345103",
@@ -42,7 +42,7 @@ export const siteConfig: SiteConfig = {
   amenities: [
     "Swimming Pool",
     "15 All-Pool-View Rooms",
-    "Artisan Stone Cafe",
+    "Cafe",
     "Spacious Party Lawn",
     "Dedicated Free Parking",
     "High-Speed Free Wi-Fi",
