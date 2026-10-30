@@ -55,7 +55,7 @@ export const siteConfig: SiteConfig = {
     frontDesk: "24/7 Front Desk (Check-in: 01:00 PM | Check-out: 11:00 AM)",
   },
   socials: {
-    instagram: "https://instagram.com",
+    instagram: "https://www.instagram.com/localroostcafe?cplk=MTNhZ3pncTFrN3pnMw==",
     facebook: "https://facebook.com",
     tripadvisor: "https://tripadvisor.com",
   },
