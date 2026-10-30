@@ -52,7 +52,7 @@ export const siteConfig: SiteConfig = {
   hours: {
     cafe: "10:00 AM – 11:00 PM (Daily)",
     dining: "12:30 PM – 03:30 PM (Lunch) | 07:00 PM – 11:30 PM (Dinner)",
-    frontDesk: "24/7 Front Desk (Check-in: 01:00 PM | Check-out: 11:00 AM)",
+    frontDesk: "24/7 Front Desk (Check-in: 11:00 AM | Check-out: 11:00 AM)",
   },
   socials: {
     instagram: "https://www.instagram.com/localroostcafe?cplk=MTNhZ3pncTFrN3pnMw==",
