@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = "https://www.localroostcafe.com";
+const baseUrl = "https://www.localrooststayandcafe.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = ["", "/rooms", "/cafe", "/dining", "/events", "/experiences", "/gallery", "/contact"];
