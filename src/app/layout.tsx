@@ -20,6 +20,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://localrooststayandcafe.com"),
   title: `${siteConfig.name} | Cafe, Gourmet Dining & Boutique Stay`,
   description: siteConfig.description,
   keywords: [
