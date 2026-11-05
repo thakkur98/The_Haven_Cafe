@@ -12,15 +12,14 @@ export const Footer = () => {
           {/* Brand Col */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <span className="flex w-12 h-12 shrink-0 items-center justify-center rounded-full border-2 border-[#B78332] bg-white">
-                <Image
-                  src="/logo-icon.svg"
-                  alt=""
-                  width={680}
-                  height={430}
-                  className="w-10 h-8 object-contain"
-                />
-              </span>
+              <Image
+                src="/logo.png"
+                alt=""
+                width={1024}
+                height={768}
+                unoptimized
+                className="w-16 h-12 shrink-0 object-contain"
+              />
               <span className="font-serif text-2xl font-bold tracking-tight text-white">
                 The Local Roost
               </span>
