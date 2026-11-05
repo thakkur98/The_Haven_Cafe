@@ -1,4 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <circle cx="32" cy="32" r="32" fill="#C35A38"/>
-  <text x="32" y="40" text-anchor="middle" font-family="Georgia, serif" font-size="25" font-weight="700" fill="#FFFFFF">LR</text>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs>
+    <style>
+      .green { fill: #102B19; }
+      .gold { fill: #B78332; }
+      .serif { font-family: Georgia, 'Times New Roman', serif; }
+      .sans { font-family: Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- LR Monogram -->
+  <g class="green">
+    <text x="330" y="455" font-size="390" font-family="Georgia">L</text>
+    <text x="520" y="520" font-size="390" font-family="Georgia">R</text>
+  </g>
+
+  <!-- Bird -->
+  <g class="green">
+    <path d="M510 252 C552 223 585 178 630 151
+    C656 136 681 136 705 146 L739 161
+    L712 174 C729 188 736 204 731 221
+    C724 247 700 264 672 269
+    C642 275 611 265 584 253
+    C562 243 540 245 510 252Z"/>
+    <path d="M705 160 L752 165 L719 183Z"/>
+    <path d="M578 248 C621 251 663 231 690 199
+    C678 231 648 257 609 265Z" fill="#F7F2E7"/>
+    <circle cx="692" cy="157" r="5" fill="#F7F2E7"/>
+  </g>
+
+  <!-- Golden branch -->
+  <g class="gold">
+    <path d="M704 421 Q820 370 899 282"
+      fill="none" stroke="#B78332" stroke-width="7"/>
+    <path d="M757 397 Q720 345 761 318 Q790 360 757 397Z"/>
+    <path d="M811 366 Q795 302 852 273 Q870 335 811 366Z"/>
+    <path d="M838 354 Q895 310 940 343 Q895 385 838 354Z"/>
+    <path d="M785 381 Q830 420 798 456 Q758 425 785 381Z"/>
+    <path d="M865 325 Q895 265 951 278 Q930 340 865 325Z"/>
+  </g>
+
+  <!-- Brand name -->
+  <text x="600" y="675" text-anchor="middle"
+    class="green serif" font-size="112"
+    letter-spacing="1">LOCAL ROOST</text>
+
+  <!-- Tagline -->
+  <g stroke="#B78332" stroke-width="4">
+    <path d="M135 760 H315"/>
+    <path d="M885 760 H1065"/>
+  </g>
+
+  <text x="600" y="779" text-anchor="middle"
+    class="green sans" font-size="43"
+    font-weight="600" letter-spacing="15">
+    STAY &amp; CAFE
+  </text>
 </svg>
