@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/data/siteConfig";
 import { MapPin, Phone, Mail, Clock, MessageSquare, ExternalLink, Waves } from "lucide-react";
 
@@ -11,9 +12,15 @@ export const Footer = () => {
           {/* Brand Col */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#C35A38] text-white flex items-center justify-center font-serif text-lg font-bold">
-                LR
-              </div>
+              <span className="flex w-12 h-12 shrink-0 items-center justify-center rounded-full border-2 border-[#B78332] bg-white">
+                <Image
+                  src="/logo-icon.svg"
+                  alt=""
+                  width={680}
+                  height={430}
+                  className="w-10 h-8 object-contain"
+                />
+              </span>
               <span className="font-serif text-2xl font-bold tracking-tight text-white">
                 The Local Roost
               </span>

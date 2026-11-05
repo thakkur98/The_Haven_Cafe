@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { PhoneCall, Menu, X, Coffee, BedDouble, Waves } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
@@ -45,9 +46,15 @@ export const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Brand Logo & Tagline */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full bg-[#C35A38] text-white flex items-center justify-center font-serif text-lg font-bold shadow-sm transition-transform group-hover:scale-105">
-              LR
-            </div>
+            <span className="flex w-12 h-12 shrink-0 items-center justify-center rounded-full border-2 border-[#B78332] bg-white transition-transform group-hover:scale-105">
+              <Image
+                src="/logo-icon.svg"
+                alt=""
+                width={680}
+                height={430}
+                className="w-10 h-8 object-contain"
+              />
+            </span>
             <div>
               <span className="font-serif text-lg sm:text-xl font-bold tracking-tight text-[#221F1E] block">
                 The Local Roost
@@ -131,9 +138,15 @@ export const Navbar = () => {
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-[#F1EDE4]">
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-[#C35A38] text-white flex items-center justify-center font-serif font-bold text-sm">
-                    LR
-                  </div>
+                  <span className="flex w-10 h-10 shrink-0 items-center justify-center rounded-full border-2 border-[#B78332] bg-white">
+                    <Image
+                      src="/logo-icon.svg"
+                      alt=""
+                      width={680}
+                      height={430}
+                      className="w-8 h-6 object-contain"
+                    />
+                  </span>
                   <div>
                     <span className="font-serif font-bold text-base text-[#221F1E] block">
                       The Local Roost
