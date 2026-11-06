@@ -58,8 +58,21 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#221F1E]/75 via-[#221F1E]/45 to-[#FAF7F2]"></div>
         </div>
 
+        <div className="diwali-effects" aria-hidden="true">
+          <span className="diwali-diya diwali-diya-left">🪔</span>
+          <span className="diwali-diya diwali-diya-right">🪔</span>
+          <span className="diwali-skyshot diwali-skyshot-left">
+            <span className="diwali-rocket-trail"></span>
+            <span className="diwali-burst"></span>
+          </span>
+          <span className="diwali-skyshot diwali-skyshot-right">
+            <span className="diwali-rocket-trail"></span>
+            <span className="diwali-burst"></span>
+          </span>
+        </div>
+
         {/* Hero Copy */}
-        <div className="max-w-4xl mx-auto pt-10 sm:pt-16 space-y-6 text-white">
+        <div className="relative z-10 max-w-4xl mx-auto pt-10 sm:pt-16 space-y-6 text-white">
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md border border-white/30 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase">
             <Sparkles className="w-3.5 h-3.5 text-[#D4A373]" />
             <span>Jim Corbett, Uttarakhand • 15 All-Pool-View Rooms</span>
@@ -93,7 +106,7 @@ export default function HomePage() {
         </div>
 
         {/* Floating Quick Availability Bar */}
-        <div className="w-full pt-10 sm:pt-14">
+        <div className="relative z-10 w-full pt-10 sm:pt-14">
           <QuickAvailabilityBar />
         </div>
       </section>

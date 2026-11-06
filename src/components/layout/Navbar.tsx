@@ -48,20 +48,12 @@ export const Navbar = () => {
           <Link href="/" className="flex items-center gap-3 group">
             <Image
               src="/logo.png"
-              alt=""
+              alt="The Local Roost Cafe & Stay"
               width={1024}
               height={768}
               unoptimized
               className="w-16 h-12 shrink-0 object-contain transition-transform group-hover:scale-105"
             />
-            <div>
-              <span className="font-serif text-lg sm:text-xl font-bold tracking-tight text-[#221F1E] block">
-                The Local Roost
-              </span>
-              <span className="block text-[10px] tracking-widest uppercase font-sans text-[#4A5B4E] font-semibold">
-                Cafe & Stay • Jim Corbett
-              </span>
-            </div>
           </Link>
 
           {/* Desktop Nav Links */}

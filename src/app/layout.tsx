@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     locale: "en_US",
   },
   icons: {
-    icon: "/logo-mark.svg",
-    shortcut: "/logo-mark.svg",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
   },
 };
 

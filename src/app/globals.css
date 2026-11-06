@@ -42,3 +42,179 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #C35A38;
 }
+
+.diwali-effects {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.diwali-diya {
+  position: absolute;
+  bottom: 7rem;
+  font-size: 1.75rem;
+  filter: drop-shadow(0 0 10px rgb(255 184 58 / 55%));
+  animation: diya-flicker 3s ease-in-out infinite alternate;
+}
+
+.diwali-diya-left {
+  left: clamp(1rem, 8vw, 7rem);
+}
+
+.diwali-diya-right {
+  right: clamp(1rem, 8vw, 7rem);
+  animation-delay: 0.8s;
+}
+
+.diwali-skyshot {
+  position: absolute;
+  bottom: 12%;
+  width: 1px;
+  height: 1px;
+  animation: skyshot-flight 8s cubic-bezier(0.35, 0, 0.65, 1) infinite;
+}
+
+.diwali-skyshot-left {
+  left: 20%;
+}
+
+.diwali-skyshot-right {
+  right: 20%;
+  animation-name: skyshot-flight-right;
+  animation-delay: 4s;
+}
+
+.diwali-rocket-trail {
+  position: absolute;
+  left: -1px;
+  bottom: 0;
+  width: 3px;
+  height: clamp(2.5rem, 7vh, 4.5rem);
+  border-radius: 999px;
+  background: linear-gradient(to top, transparent, #ffae42 55%, #fff7ce);
+  box-shadow: 0 0 9px 2px rgb(255 183 75 / 72%);
+  transform-origin: bottom center;
+  animation: skyshot-trail 8s ease-out infinite;
+}
+
+.diwali-skyshot-left .diwali-rocket-trail {
+  transform: rotate(15deg);
+}
+
+.diwali-skyshot-right .diwali-rocket-trail {
+  transform: rotate(-15deg);
+  animation-delay: 4s;
+}
+
+.diwali-burst {
+  position: absolute;
+  top: -3.25rem;
+  left: -3.25rem;
+  width: 6.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, #fff8d8 0 2%, #ffd166 3% 5%, transparent 12%),
+    repeating-conic-gradient(
+      from 7deg,
+      transparent 0deg 5deg,
+      #ffdd76 6deg 7deg,
+      transparent 8deg 14deg,
+      #fff4cf 15deg 16deg,
+      transparent 17deg 22.5deg
+    );
+  -webkit-mask-image: radial-gradient(circle, transparent 0 8%, #000 13% 100%);
+  mask-image: radial-gradient(circle, transparent 0 8%, #000 13% 100%);
+  filter: drop-shadow(0 0 5px rgb(255 197 82 / 90%));
+  opacity: 0;
+  transform: scale(0.15);
+  animation: skyshot-burst 8s ease-out infinite;
+}
+
+.diwali-skyshot-right .diwali-burst {
+  background:
+    radial-gradient(circle, #fff8e7 0 2%, #ff916b 3% 5%, transparent 12%),
+    repeating-conic-gradient(
+      from 0deg,
+      transparent 0deg 5deg,
+      #ff9a76 6deg 7deg,
+      transparent 8deg 14deg,
+      #fff1bd 15deg 16deg,
+      transparent 17deg 22.5deg
+    );
+  filter: drop-shadow(0 0 5px rgb(255 139 103 / 90%));
+  animation-delay: 4s;
+}
+
+@keyframes diya-flicker {
+  from {
+    filter: drop-shadow(0 0 6px rgb(255 184 58 / 45%));
+  }
+  to {
+    filter: drop-shadow(0 0 13px rgb(255 184 58 / 78%));
+  }
+}
+
+@keyframes skyshot-flight {
+  0%, 3% {
+    transform: translate(0, 0);
+  }
+  27% {
+    transform: translate(14vw, -54vh);
+  }
+  100% {
+    transform: translate(14vw, -54vh);
+  }
+}
+
+@keyframes skyshot-flight-right {
+  0%, 3% {
+    transform: translate(0, 0);
+  }
+  27% {
+    transform: translate(-14vw, -54vh);
+  }
+  100% {
+    transform: translate(-14vw, -54vh);
+  }
+}
+
+@keyframes skyshot-trail {
+  0%, 25% {
+    opacity: 1;
+  }
+  29%, 100% {
+    opacity: 0;
+  }
+}
+
+@keyframes skyshot-burst {
+  0%, 27% {
+    opacity: 0;
+    transform: scale(0.15) rotate(-12deg);
+  }
+  32% {
+    opacity: 1;
+    transform: scale(0.8) rotate(0deg);
+  }
+  38% {
+    opacity: 1;
+    transform: scale(1.15) rotate(10deg);
+  }
+  55%, 100% {
+    opacity: 0;
+    transform: scale(1.5) rotate(18deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .diwali-diya {
+    animation: none;
+  }
+
+  .diwali-skyshot {
+    display: none;
+  }
+}
