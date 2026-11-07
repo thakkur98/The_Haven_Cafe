@@ -26,14 +26,14 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-  name: "The Local Roost Cafe & Stay",
+  name: "The Local Roost Cafe and Stay",
   shortName: "The Local Roost",
   tagline: "Boutique Pool-View Stay & Cafe in Jim Corbett",
   description: "A serene getaway in Jim Corbett featuring 15 all-pool-view rooms, a sparkling swimming pool, lush party lawn, expansive parking, and an artisanal stone-built cafe.",
   phone: "+91 79003 45103",
   whatsappNumber: "917900345103",
   whatsappCallUrl: "https://wa.me/917900345103",
-  email: "stay@thelocalroost.com",
+  email: "localrooststayandcafe@gmail.com",
   address: "Jim Corbett, Neeripur, Chhoi, Ramnagar, Uttarakhand 244715",
   landmark: "Near Corbett Wild Flower Resort And Spa",
   googleMapsUrl: "https://maps.app.goo.gl/K6GSV4NkGn1rDA99A?g_st=iw",
