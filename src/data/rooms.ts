@@ -16,7 +16,7 @@ export interface Room {
 export const roomsData: Room[] = [
   {
     id: "deluxe-pool-view-room",
-    name: "Deluxe Pool View Room",
+    name: "Kingfisher Room",
     category: "pool-view",
     tagline: "15 boutique rooms overlooking our sparkling swimming pool & lush lawn",
     description: "Every room at The Local Roost features direct, unobstructed views of our crystal-blue swimming pool and landscaped courtyard. Enjoy warm contemporary interiors, plush king bedding, ambient mood lighting, a private sit-out balcony or patio, and modern en-suite rain shower facilities.",
@@ -50,7 +50,7 @@ export const roomsData: Room[] = [
   },
   {
     id: "first-floor-balcony-room",
-    name: "First Floor Pool Balcony Room",
+    name: "Sparrow Room",
     category: "balcony",
     tagline: "Elevated vantage point with sunrise breezes over the pool & lawn",
     description: "Located on the upper deck with elevated views spanning the entire pool courtyard, surrounding trees, and Ramnagar valley skyline. Features an intimate wooden railing balcony ideal for morning tea and evening conversations.",
