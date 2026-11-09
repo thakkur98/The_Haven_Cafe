@@ -30,7 +30,7 @@ export const TableReservationModal = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const formattedMessage = `🍽️ *TABLE RESERVATION INQUIRY - THE HAVEN*
+    const formattedMessage = `🍽️ *TABLE RESERVATION INQUIRY - The Local Roost Stay and Cafe*
 ----------------------------------------
 📍 *Venue:* ${venue === "cafe" ? "The Local Roost Cafe" : "Gourmet Dining Room"}
 👤 *Name:* ${name || "Guest"}
