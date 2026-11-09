@@ -12,25 +12,25 @@ export const WhatsAppWidget = () => {
       title: "Book / Inquire Room",
       desc: "Check dates & bespoke stay packages",
       icon: BedDouble,
-      message: "Hi The Haven, I would like to inquire about room availability and rates.",
+      message: "Hi The Local Roost Stay and Cafe, I would like to inquire about room availability and rates.",
     },
     {
       title: "Reserve a Dining Table",
       desc: "Lunch, high tea or dinner reservations",
       icon: Utensils,
-      message: "Hi The Haven, I would like to reserve a table for lunch/dinner.",
+      message: "Hi The Local Roost Stay and Cafe, I would like to reserve a table for lunch/dinner.",
     },
     {
       title: "Cafe & Takeaway Order",
       desc: "Order fresh bakery or specialty coffee",
       icon: Coffee,
-      message: "Hi The Haven Cafe, I would like to place a pickup order / check today's specials.",
+      message: "Hi The Local Roost Stay and Cafe, I would like to place a pickup order / check today's specials.",
     },
     {
       title: "Direct WhatsApp Voice Call",
       desc: "Speak with our duty manager directly",
       icon: PhoneCall,
-      message: "Hi The Haven, I am calling regarding an urgent inquiry.",
+      message: "Hi The Local Roost Stay and Cafe, I am calling regarding an urgent inquiry.",
     },
   ];
 
