@@ -24,7 +24,7 @@ export const QuickAvailabilityBar = () => {
 🛏️ *Rooms:* ${rooms}
 👥 *Guests:* ${guests} (maximum 2 guests per room)
 ----------------------------------------
-Hi The Haven, please share available rooms & rates for these dates!`;
+Hi! The Local Roost Stay and Cafe, please share available rooms & rates for these dates!`;
 
     const encoded = encodeURIComponent(msg);
     const url = `https://wa.me/${siteConfig.whatsappNumber}?text=${encoded}`;
