@@ -33,7 +33,7 @@ export const RoomInquiryModal = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const formattedMessage = `🏨 *ROOM AVAILABILITY INQUIRY - THE HAVEN*
+    const formattedMessage = `🏨 *ROOM AVAILABILITY INQUIRY - The Local Roost Stay and Cafe*
 ----------------------------------------
 👤 *Guest Name:* ${name || "Guest"}
 📱 *Phone:* ${phone || "Not provided"}
