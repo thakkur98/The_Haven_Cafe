@@ -28,7 +28,7 @@ export default function EventsPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const msg = `🥂 *PRIVATE EVENT & GATHERING INQUIRY - THE HAVEN*
+    const msg = `🥂 *PRIVATE EVENT & GATHERING INQUIRY - The Local Roost Stay and Cafe*
 ----------------------------------------
 👤 *Host / Organizer:* ${name || "Guest"}
 📱 *Phone:* ${phone || "Not provided"}
