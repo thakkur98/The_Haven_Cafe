@@ -50,7 +50,7 @@ export default function HomePage() {
         <div className="absolute inset-0 -z-10 overflow-hidden">
           <Image
             src="/images/resort-hero.jpg"
-            alt="The Local Roost Cafe & Stay Front Facade"
+            alt="The Local Roost Stay and Cafe Front Facade"
             fill
             priority
             className="object-cover object-center brightness-[0.82]"
@@ -80,7 +80,7 @@ export default function HomePage() {
 
           <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1]">
             The Local Roost <br />
-            <span className="italic font-normal text-[#D4A373]">Cafe & Stay</span>
+            <span className="italic font-normal text-[#D4A373]">Stay and Cafe</span>
           </h1>
 
           <p className="max-w-2xl mx-auto text-sm sm:text-base lg:text-lg text-white/90 font-light leading-relaxed">
@@ -115,7 +115,7 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
           <span className="text-xs font-bold uppercase tracking-widest text-[#C35A38]">
-            Experience The Local Roost
+            Experience The Local Roost Stay and Cafe
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#221F1E]">
             A Secluded Haven in Ramnagar, Jim Corbett
@@ -203,7 +203,7 @@ export default function HomePage() {
             <div className="relative h-64 w-full overflow-hidden">
               <Image
                 src="/images/resort-hero.jpg"
-                alt="The Local Roost Cafe"
+                alt="The Local Roost Stay and Cafe"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -215,7 +215,7 @@ export default function HomePage() {
             <div className="p-6 flex-grow flex flex-col justify-between space-y-4">
               <div>
                 <h3 className="font-serif text-2xl font-bold text-[#221F1E]">
-                  Cafe Nights at The Local Roost
+                  Cafe Nights at The Local Roost Stay and Cafe
                 </h3>
                 <p className="text-xs sm:text-sm text-[#221F1E]/75 mt-2 leading-relaxed">
                   Sip signature drinks, enjoy cocktails, and settle into easy evening conversations by the pool.
