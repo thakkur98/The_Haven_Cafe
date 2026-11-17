@@ -20,7 +20,7 @@ export const ComingSoonModal = ({
   if (!isOpen) return null;
 
   const handleWhatsAppChat = () => {
-    const msg = `👋 *INQUIRY - THE LOCAL ROOST CAFE & STAY*
+    const msg = `👋 *INQUIRY - THE LOCAL ROOST STAY AND CAFE*
 ----------------------------------------
 📍 *Topic:* ${title} (${category})
 Hi Team, I was browsing your website and would like to know the current menu options, prices, or specials for my visit!`;
