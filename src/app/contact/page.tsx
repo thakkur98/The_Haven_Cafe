@@ -24,7 +24,7 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    const formatted = `💬 *INQUIRY - THE LOCAL ROOST CAFE & STAY*
+    const formatted = `💬 *INQUIRY - THE LOCAL ROOST STAY AND CAFE*
 ----------------------------------------
 👤 *Name:* ${name || "Guest"}
 📱 *Phone:* ${phone || "Not provided"}
@@ -310,7 +310,7 @@ Jim Corbett, Uttarakhand`;
               <div className="absolute inset-0 bg-[#221F1E]/55 flex flex-col items-center justify-center text-center p-4">
                 <MapPin className="w-8 h-8 text-[#C35A38] mb-2" />
                 <span className="font-serif text-white font-bold text-base">
-                  The Local Roost Cafe & Stay
+                  The Local Roost Stay & Cafe
                 </span>
                 <span className="text-white/80 text-xs mt-1 max-w-xs">
                   Near Corbett Wild Flower Resort And Spa, Chhoi, Ramnagar
