@@ -48,7 +48,7 @@ export const Navbar = () => {
           <Link href="/" className="flex items-center gap-3 group">
             <Image
               src="/logo.png"
-              alt="The Local Roost Cafe & Stay"
+              alt="The Local Roost Stay and Cafe"
               width={1024}
               height={768}
               unoptimized
