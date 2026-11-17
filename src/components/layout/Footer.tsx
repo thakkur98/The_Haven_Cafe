@@ -154,7 +154,7 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#FAF7F2]/50 gap-4">
-          <p>© {new Date().getFullYear()} The Local Roost Cafe & Stay. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} The Local Roost Stay and Cafe. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link href="/contact" className="hover:text-white transition-colors">
               House Rules & Policies
